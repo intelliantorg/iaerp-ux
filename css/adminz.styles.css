@@ -1,0 +1,36 @@
+
+/* ============================================= fixed left panel ============================================= */
+.fixed_left_panel { position:fixed;!important position:absolute; top:31%; left:0;  height:118px; z-index:1100; }
+.show_left_div { cursor:pointer; height:100%; width:20px; color:#FFF; float:left; opacity:1; -moz-border-radius-bottomright:6px; -moz-border-radius-topright:6px; -webkit-border-bottom-right-radius:6px; -webkit-border-top-right-radius:6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; behavior: url(PIE.htc);}
+.hidden_left_div { background:#222222; float:left; display:none; height:100%; color:#FFF; width:108px;opacity:1; }
+
+.fixed_left_panel a, .fixed_left_panel a:visited { color:#FFF; text-decoration:none; font:normal 11px Arial, Helvetica, sans-serif;}
+.fixed_left_panel a:hover { color:#ccc; }
+
+.fixed_left_panel ul { background:url(../images/icons_left.png) no-repeat right top; margin:16px 0; text-align:right; padding:0 30px 0 0; }
+.fixed_left_panel li { padding:7px; }
+
+.setup_left{height: 349px;}
+.setup_left ul { background:url(../images/icons_left_setup.png) no-repeat right top; margin:16px 0; text-align:right; padding:0 30px 0 0; }
+.setup_left li { padding:6.3px; }
+.setup_hidden{width:150px;}
+/* ============================================= left and right arrow ============================================= */
+.left_arrow { background:url(../images/left_arrow.png) no-repeat center #222222; }
+.show_right_div:hover { padding:0 2px; }
+.right_arrow { background:url(../images/right_arrow.png) no-repeat center #000; }
+.show_left_div:hover { padding:0 2px; }
+.up_arrow { background:url(../images/up_arrow.png) no-repeat center #000; }
+#top_menu_button:hover { padding:2px 0; }
+.down_arrow { background:url(../images/down_arrow.png) no-repeat center #000; }
+
+
+/* ============================================= boxes ============================================= */
+a.box { display: block; padding: 12px 12px 12px 52px; color: #333; text-decoration: none; margin: 20px 0; }	
+a.box:hover { color: #000; text-decoration:none; }
+.close { width: 9px; height: 9px; float: right; background: url("../images/close_box.png") no-repeat left top; margin: 6px 0; }
+.close:hover { background: url("../images/close_box.png") no-repeat left bottom; }
+.succes { border: 1px solid #b3dc7c; background: url("../images/success.png") no-repeat 10px 50% #e8ffca; }
+.error { border: 1px solid #ebb1b1; background: url("../images/error.png") no-repeat 10px 50% #ffd6d6; }
+.warning { border: 1px solid #efdc75; background: url("../images/warning.png") no-repeat 10px 50% #fff7cb; }
+.info { border: 1px solid #afdbee; background: url("../images/info.png") no-repeat 10px 50% #e4f5fd; }
+

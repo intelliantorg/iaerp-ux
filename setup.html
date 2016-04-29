@@ -1,0 +1,1864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>iaERP</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<!--selectbox-->
+<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.selectbox-0.5.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#Items').selectbox();
+	});
+	$(document).ready(function() {
+		$('#company_location').selectbox();
+	});
+
+	$(document).ready(function() {
+		$('#country_setup').selectbox();
+	});
+
+	$(document).ready(function() {
+		$('#language_setup').selectbox();
+	});
+
+	$(document).ready(function() {
+		$('#time_zone_setup').selectbox();
+	});
+
+	$(document).ready(function() {
+		$('#name_format_setup').selectbox();
+	});
+
+	$(document).ready(function() {
+		$('#email_signature').selectbox();
+	});
+
+	</script>
+<!--selectbox-->
+<!--dropdown-->
+<script type="text/javascript" src="js/drop_down.js"></script>
+<!--tool_tip-->
+<script src="js/jquery.tipsy.js" type="text/javascript"></script>
+<script type='text/javascript'>
+
+	$(function() {
+	  $('#download_sheet').tipsy({gravity: 's'});
+    });
+
+	$(function() {
+	  $('#print_sheet').tipsy({gravity: 's'});
+    });
+
+	$(function() {
+	  $('#refresh_sheet').tipsy({gravity: 's'});
+    });
+
+
+  </script>
+<!--tool_tip-->
+<!--drop_down-->
+<!--datepicker-->
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript">
+			$(function(){
+
+				// Datepicker
+				$('#datepicker').datepicker({
+					inline: true
+				});
+
+				$('#birthday').datepicker({
+					inline: true
+				});
+
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+
+			});
+		</script>
+<!--datepicker_acordian-->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<!-- optional -->
+<script type="text/javascript" src="js/jquery.accordionza.pack.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	// Accordion Demo #3
+	$('#accordion3').accordionza({
+		autoPlay: false,
+		pauseOnHover: true,
+		slideEasing: 'easeOutCirc',
+		slideTrigger: 'mouseover'
+	});
+
+});
+	</script>
+<!--datepicker-->
+<!--date&time picker for search-->
+<script type="text/javascript" src="js/datepicker.js"></script>
+<!--date&time picker for search-->
+<!--colorbox-->
+<link rel="stylesheet" href="css/colorbox.css" />
+<script src="js/jquery.colorbox.js"></script>
+<script src="js/colorbox_inline.js"></script>
+<!--colorbox-->
+<!--left_panel-->
+<link type="text/css" rel="stylesheet" href="css/adminz.styles.css" />
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript">
+  //show and hide left menu
+$(document).ready(function(){
+$('.show_left_div').mouseenter(function() {
+  $(this).toggleClass("right_arrow").toggleClass("left_arrow");
+  $(".hidden_left_div").animate({width: ['toggle', 'swing']}, 'medium');
+
+	});
+
+});
+
+</script>
+<!--left_panel-->
+<style type="text/css">
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ #quicklink{
+ top:30px;
+ }
+
+ #notes{
+ top:30px;
+ }
+ #calender_div{
+right: 32%;
+}
+#full_calender_preview ul{
+padding-left: 65px !important;
+padding-right: 65px !important;
+}
+.menu_top{
+background: url("images/sprites.png") no-repeat scroll -5px -381px transparent;
+left:110px;
+    position: absolute;
+    top: -9px !important;
+    width: 12px;
+}
+.menu_top_tools{
+background: url("images/sprites.png") no-repeat scroll -5px -381px transparent;
+	right: 17px;
+    position: absolute;
+    top: -9px !important;
+    width: 12px;
+}
+
+.edit_filter {
+    left: 70px;
+}
+
+.settings {
+left: 147px;
+}
+#signin_menu{
+	width:164px;
+}
+</style>
+<!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+<![endif]-->
+<script type="text/javascript">
+//FOR show HTML5 visible in IE
+ document.createElement('header');
+ document.createElement('hgroup');
+ document.createElement('nav');
+ document.createElement('menu');
+ document.createElement('section');
+ document.createElement('article');
+ document.createElement('aside');
+ document.createElement('footer');
+ document.createElement('figure');
+</script>
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/style_ie7.css" /><![endif]-->
+<!--tab and accordian for setup-->
+<script class="jsbin" src="js/jquery-ui.js"></script>
+<!--tab and accordian for setup-->
+
+</head>
+<body>
+<!--leftpanel_start-->
+<div class="fixed_left_panel corners_right setup_left">
+  <div class="hidden_left_div setup_hidden">
+    <ul class="list_left">
+      <li><a href="#">Personal Settings</a></li>
+      <li><a href="#">Users & Permissions</a></li>
+      <li><a href="#">Organization Settings</a></li>
+      <li><a href="#">Customization</a></li>
+      <li><a href="#">Automation</a></li>
+      <li><a href="#">Templates</a></li>
+      <li><a href="#">Website Integration</a></li>
+      <li><a href="#">Apps & Add-ons</a></li>
+      <li><a href="#">Developer Space</a></li>
+      <li><a href="#">Data Administration</a></li>
+      <li><a href="#">Subscription Manager</a></li>
+    </ul>
+  </div>
+  <div class="show_left_div right_arrow"></div>
+  <div class="clear"></div>
+</div>
+<!--leftpanel_end-->
+<!--container_start-->
+<div id="container">
+  <!--wrapper_start-->
+  <section class="wrapper">
+    <!--header_start-->
+    <header>
+      <!--logo_start-->
+      <div class="logo"> <a href=""><img src="images/logo.png" alt="" title="" /></a> </div>
+      <!--logo_end-->
+      <!--right_top_menu_start-->
+      <div class="header_right">
+        <ul>
+          <li> <a href="#" class="quick_link"> <span><img src="images/blank.gif" alt="" title="" /></span> </a>
+            <fieldset id="quicklink">
+            <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+            <ul id="drop_down_menus_quick">
+              <li><a class='inline create_account_drop' href="#inline_content">Create Account</a>
+                <div style='display:none'>
+                  <div id='inline_content' style='padding:10px; background:#fff;'>
+                    <div id="quick_contact">
+                      <div class="quick_contact_left">
+                        <div class="account_name"> Account Name </div>
+                        <div class="account_name"> Phone Number </div>
+                        <div class="account_name"> E-Mail Address </div>
+                      </div>
+                      <div class="quick_contact_right">
+                        <div class="account_box">
+                          <input type="text" onfocus="if(this.value == 'Name') { this.value = ''; }" value="Name" title="" alt="" />
+                        </div>
+                        <div class="account_box">
+                          <input type="text" title="" alt="" class="phone_no" />
+                          <input type="text" title="" alt="" class="phone_no" />
+                          <input type="text" title="" alt="" class="phone_no_full"/>
+                        </div>
+                        <div class="account_box">
+                          <input type="text" onfocus="if(this.value == 'Email') { this.value = ''; }" value="Email" title="" alt="" />
+                        </div>
+                        <div class="account_box">
+                          <input type="submit" value="Submit" title="" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#" class="create_contact_drop">Create Contact</a></li>
+              <li><a href="#" class="create_case_drop">Create Case</a></li>
+              <li><a href="#" class="create_lead_drop">Create Lead</a></li>
+              <li><a href="#" class="create_opportunity_drop">Create Opportunity</a></li>
+            </ul>
+            </fieldset>
+          </li>
+          <li> <a href="#" class="notes_icon"><span><img src="images/blank.gif" alt="" title="" /></span></a>
+            <fieldset id="notes">
+            <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+            <ul id="drop_down_menus_notes">
+              <li><a href="#" class="search_note">Search all note</a></li>
+              <li><a href="#" class="notebook_drop">Notebook</a></li>
+              <li><a href="#" class="new_note_drop">Create New Note</a></li>
+            </ul>
+            </fieldset>
+          </li>
+          <li><a href="#" class="sendmail_icon"><img src="images/blank.gif" alt="" title="" /></a></li>
+          <li><a href="#" class="inbox_icon"><img src="images/blank.gif" alt="" title="" /></a></li>
+          <li><a href="#" class="trash_icon"><img src="images/blank.gif" alt="" title="" /></a></li>
+          <li id="username_display"> <a href="#" class="username">admin123
+            <!--<span><img src="images/blank.gif" alt="" title="" /></span>-->
+            </a>
+            <!--<fieldset id="signin_menu_username">
+            <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+            <ul id="drop_down_menus_name">
+              <li><a href="#">User Details</a></li>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+            </fieldset>-->
+          </li>
+          <li id="setup_display"> <a href="login" class="setup_icon"><span><img src="images/blank.gif" alt="" title="" /></span></a>
+            <fieldset id="signin_menu">
+            <div class="menu_top settings"><img src="images/blank.gif" alt="" title="" /></div>
+            <ul id="drop_down_menus">
+              <li><a href="#" class="preferences_drop">Preferences</a></li>
+              <li><a href="#" class="setup_drop">Setup</a></li>
+              <li><a href="#" class="help_drop">Help</a></li>
+              <li><a href="#" class="signout_drop">Signout</a></li>
+            </ul>
+            </fieldset>
+          </li>
+        </ul>
+        <div class="inbox_message">8</div>
+      </div>
+      <!--right_top_menu_end-->
+      <!--menu_start-->
+      <nav id="topnav">
+        <ul>
+          <li><a href="#" class="home">Home</a></li>
+          <li><a href="#" class="leads">Leads</a></li>
+          <li><a href="#" class="activities">Activities</a></li>
+          <li><a href="#" class="orders">Orders</a></li>
+          <li><a href="#" class="forecasts">Forecasts</a></li>
+          <li class="menu_active"><a href="#" class="marketing_active">Marketing</a></li>
+          <li><a href="#" class="partners">Partners</a></li>
+          <li class="position_relative"><a href="#" class="more">More..</a>
+            <fieldset id="more_div">
+            <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+            <ul id="drop_down_menus_more">
+              <li><a href="#" class="contacts">Contacts</a></li>
+              <li><a href="#" class="accounts">Accounts</a></li>
+              <li><a href="#" class="cases">Cases</a></li>
+              <li><a href="#" class="opportunities">Opportunities</a></li>
+              <li><a href="#" class="quotes">Quotes</a></li>
+              <li><a href="#" class="teams">Teams</a></li>
+              <li><a href="#" class="reports">Reports</a></li>
+            </ul>
+            </fieldset>
+          </li>
+        </ul>
+        <div id="search_panel">
+          <ul>
+            <li> <a href="#" class="new_items"><span><img src="images/blank.gif" alt="" title="" /></span></a>
+              <fieldset id="new_item_div">
+              <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+              <ul id="new_item_menus">
+                <li><a href="#" class="new_leads_drop">New Lead</a></li>
+                <li><a href="#" class="new_account_drop">New Account</a></li>
+                <li><a href="#" class="new_contact_drop">New Contact</a></li>
+                <li><a href="#" class="new_potential_drop">New Potential</a></li>
+                <li><a href="#" class="new_campaign_drop">New Campaign</a></li>
+                <li><a href="#" class="new_purchase_drop">New Purchase</a></li>
+                <li><a href="#" class="new_call_drop">Order New Call</a></li>
+              </ul>
+              </fieldset>
+            </li>
+            <li class="position_relative"> <a href="#" class="recent_items"><span><img src="images/blank.gif" alt="" title="" /></span></a>
+              <fieldset id="recent_items_div">
+              <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+              <ul id="recent_items_menus">
+                <li><a href="#" class="leads_drop">Leads</a></li>
+                <li><a href="#" class="activities_drop">Activities</a></li>
+                <li><a href="#" class="orders_drop">Orders</a></li>
+                <li><a href="#" class="forecasts_drop">Forecasts</a></li>
+                <li><a href="#" class="marketing_drop">Marketing</a></li>
+                <li><a href="#" class="partners_drop">Partners</a></li>
+                <li><a href="#" class="contacts contacts_drop">Contacts</a></li>
+                <li><a href="#" class="accounts accounts_drop">Accounts</a></li>
+                <li><a href="#" class="cases cases_drop">Cases</a></li>
+                <li><a href="#" class="opportunities opportunities_drop">Opportunities</a></li>
+                <li><a href="#" class="quotes quotes_drop">Quotes</a></li>
+                <li><a href="#" class="teams teams_drop">Teams</a></li>
+                <li><a href="#" class="reports reports_drop">Reports</a></li>
+              </ul>
+              </fieldset>
+            </li>
+            <li class="calender_margin"><a href="#" class="calender"><img src="images/blank.gif" alt="" title="" /></a>
+              <fieldset id="calender_div">
+              <div class="menu_top"><img src="images/blank.gif" alt="" title="" /></div>
+              <div id="datepicker"></div>
+              <div class="col g14">
+                <ul id="accordion3">
+                  <li class="slide1">
+                    <p class="slide_handle">&nbsp;</p>
+                    <p class="slide_content"> <a href="http://www.google.com/" target="_blank">1</a> <a href="http://www.serenusinfotech.com/" target="_blank">7</a> <a href="http://www.cssmania.com/" target="_blank">30</a> </p>
+                  </li>
+                  <li class="slide2">
+                    <p class="slide_handle">&nbsp;</p>
+                    <p class="slide_content"> <a href="http://www.google.com/" target="_blank">1</a> <a href="http://www.serenusinfotech.com/" target="_blank">7</a> <a href="http://www.cssmania.com/" target="_blank">30</a> </p>
+                  </li>
+                </ul>
+              </div>
+              </fieldset>
+            </li>
+            <li id="search_panel_input">
+              <input type="text" onfocus="if(this.value == 'Search') { this.value = ''; }" value="Search"  class="serach_input"/>
+            </li>
+            <li><a href="#" class="search_box"><img src="images/blank.gif" alt="" title="" /></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!--menu_end-->
+    </header>
+    <!--header_end-->
+    <!--middlepart_start-->
+    <section id="main">
+      <!--table_start-->
+      <div class="content_table">
+        <div class="content_table_top"> Personal Settings </div>
+        <!--table_content start-->
+        <div class="main_table float_left setup_main" >
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Account Information</a></li>
+              <li><a href="#tabs-2">Security</a></li>
+              <li><a href="#tabs-3">Other Preferences</a></li>
+              <li><a href="#tabs-4">External Accounts</a></li>
+              <li><a href="#tabs-5">Delegate</a></li>
+              <li><a href="#tabs-6">Signature</a></li>
+              <li><a href="#tabs-7">Themes</a></li>
+            </ul>
+            <div id="tabs-1">
+              <div id="tabs-a">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-a-1" >Personal</a></li>
+                  <li><a href="#tabs-a-2">Professional</a></li>
+                  <li  class="tab_last_li"><a href="#tabs-a-3">Locale</a></li>
+                </ul>
+                <div id="tabs-a-1">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Username </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Fullname </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Date of Birth </div>
+                        <div class="box_panel">
+                          <input type="text" id="birthday" alt="" title="" />
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Email Address </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Phone </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Website </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-a-2">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Company Name </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Designation </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Department </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Company location </div>
+                        <div class="box_panel">
+                          <select name="Items" id="company_location">
+                            <option value="option1">Location 1</option>
+                            <option value="option2">Location 2</option>
+                            <option value="option3">Location 3</option>
+                            <option value="option4">Location 4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Street Address 1 </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Street Address 2 </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Country </div>
+                        <div class="box_panel">
+                          <select name="Items" id="country_setup">
+                            <option value="ps_AF">Afghanistan</option>
+                            <option value="sq_AL">Albania</option>
+                            <option value="ar_DZ">Algeria</option>
+                            <option value="en_AS">American Samoa</option>
+                            <option value="ca_AD">Andorra</option>
+                            <option value="pt_AO">Angola</option>
+                            <option value="en_AI">Anguilla</option>
+                            <option value="en_AQ">Antarctica</option>
+                            <option value="en_AG">Antigua and Barbuda</option>
+                            <option value="es_AR">Argentina</option>
+                            <option value="hy_AM">Armenia</option>
+                            <option value="nl_AW">Aruban</option>
+                            <option value="en_AU">Australia</option>
+                            <option value="de_AT">Austria</option>
+                            <option value="az_AZ">Azerbaijan</option>
+                            <option value="en_BS">Bahamas</option>
+                            <option value="ar_BH">Bahrain</option>
+                            <option value="bn_BD">Bangladesh</option>
+                            <option value="en_BB">Barbados</option>
+                            <option value="be_BY">Belarus</option>
+                            <option value="nl_BE">Belgium(Dutch)</option>
+                            <option value="fr_BE">Belgium(French)</option>
+                            <option value="en_BZ">Belize</option>
+                            <option value="fr_BJ">Benin</option>
+                            <option value="en_BM">Bermuda</option>
+                            <option value="en_BT">Bhutan</option>
+                            <option value="es_BO">Bolivia</option>
+                            <option value="bs_BA">Bosnia and Herzegovina</option>
+                            <option value="en_BW">Botswana</option>
+                            <option value="no_BV">Bouvet Island</option>
+                            <option value="pt_BR">Brazil</option>
+                            <option value="en_IO">British Indian Ocean Territory</option>
+                            <option value="en_VG">British Virgin Islands</option>
+                            <option value="ms_BN">Brunei</option>
+                            <option value="bg_BG">Bulgaria</option>
+                            <option value="fr_BF">Burkina Faso</option>
+                            <option value="fr_BI">Burundi</option>
+                            <option value="km_KH">Cambodia</option>
+                            <option value="fr_CM">Cameroon</option>
+                            <option value="en_CA">Canada(English)</option>
+                            <option value="fr_CA">Canada(French)</option>
+                            <option value="pt_CV">Cape Verde</option>
+                            <option value="en_KY">Cayman Islands</option>
+                            <option value="fr_CF">Central African Republic</option>
+                            <option value="ar_TD">Chad</option>
+                            <option value="es_CL">Chile</option>
+                            <option value="zh_CN">China</option>
+                            <option value="en_CX">Christmas Island</option>
+                            <option value="en_CC">Cocos Islands</option>
+                            <option value="es_CO">Colombia</option>
+                            <option value="fr_KM">Comoros</option>
+                            <option value="fr_CG">Congo</option>
+                            <option value="en_CK">Cook Islands</option>
+                            <option value="es_CR">Costa Rica</option>
+                            <option value="hr_HR">Croatia</option>
+                            <option value="es_CU">Cuba</option>
+                            <option value="el_CY">Cyprus</option>
+                            <option value="cs_CZ">Czech Republic</option>
+                            <option value="fr_CI">Cote dIvoire</option>
+                            <option value="da_DK">Denmark</option>
+                            <option value="ar_DJ">Djibouti</option>
+                            <option value="en_DM">Dominica</option>
+                            <option value="es_DO">Dominican Republic</option>
+                            <option value="es_EC">Ecuador</option>
+                            <option value="ar_EG">Egypt</option>
+                            <option value="es_SV">El Salvador</option>
+                            <option value="es_GQ">Equatorial Guinea</option>
+                            <option value="en_ER">Eritrea</option>
+                            <option value="et_EE">Estonia</option>
+                            <option value="am_ET">Ethiopia</option>
+                            <option value="en_FK">Falkland Islands</option>
+                            <option value="fo_FO">Faroe Islands</option>
+                            <option value="fj_FJ">Fiji</option>
+                            <option value="fi_FI">Finland</option>
+                            <option value="fr_FR">France</option>
+                            <option value="fr_GF">French Guiana</option>
+                            <option value="fr_PF">French Polynesia</option>
+                            <option value="fr_TF">French Southern Territories</option>
+                            <option value="fr_GA">Gabon</option>
+                            <option value="en_GM">Gambia</option>
+                            <option value="ka_GE">Georgia</option>
+                            <option value="de_DE">Germany</option>
+                            <option value="en_GH">Ghana</option>
+                            <option value="en_GI">Gibraltar</option>
+                            <option value="el_GR">Greece</option>
+                            <option value="kl_GL">Greenland</option>
+                            <option value="en_GD">Grenada</option>
+                            <option value="fr_GP">Guadeloupe</option>
+                            <option value="en_GU">Guam</option>
+                            <option value="es_GT">Guatemala</option>
+                            <option value="fr_GN">Guinea</option>
+                            <option value="pt_GW">GuineaBissau</option>
+                            <option value="en_GY">Guyana</option>
+                            <option value="fr_HT">Haiti</option>
+                            <option value="en_HM">Heard Island And McDonald Islands</option>
+                            <option value="es_HN">Honduras</option>
+                            <option value="zh_HK">Hong Kong</option>
+                            <option value="hu_HU">Hungary</option>
+                            <option value="is_IS">Iceland</option>
+                            <option value="en_IN">India</option>
+                            <option value="id_ID">Indonesia</option>
+                            <option value="fa_IR">Iran</option>
+                            <option value="ar_IQ">Iraq</option>
+                            <option value="en_IE">Ireland</option>
+                            <option value="iw_IL">Israel</option>
+                            <option value="it_IT">Italy</option>
+                            <option value="en_JM">Jamaica</option>
+                            <option value="ja_JP">Japan</option>
+                            <option value="ar_JO">Jordan</option>
+                            <option value="ru_KZ">Kazakhstan</option>
+                            <option value="sw_KE">Kenya</option>
+                            <option value="en_KI">Kiribati</option>
+                            <option value="ar_KW">Kuwait]</option>
+                            <option value="uz_KG">Kyrgyzstan</option>
+                            <option value="lo_LA">Laos</option>
+                            <option value="lv_LV">Latvia</option>
+                            <option value="ar_LB">Lebanon</option>
+                            <option value="en_LS">Lesotho</option>
+                            <option value="en_LR">Liberia</option>
+                            <option value="ar_LY">Libya</option>
+                            <option value="de_LI">Liechtenstein</option>
+                            <option value="lt_LT">Lithuania</option>
+                            <option value="fr_LU">Luxembourg(French)</option>
+                            <option value="de_LU">Luxembourg(German)</option>
+                            <option value="zh_MO">Macao</option>
+                            <option value="mk_MK">Macedonia</option>
+                            <option value="en_MG">Madagascar</option>
+                            <option value="en_MW">Malawi</option>
+                            <option value="ms_MY">Malaysia</option>
+                            <option value="dv_MV">Maldives</option>
+                            <option value="fr_ML">Mali</option>
+                            <option value="mt_MT">Malta</option>
+                            <option value="en_MH">Marshall Islands</option>
+                            <option value="fr_MQ">Martinique</option>
+                            <option value="ar_MR">Mauritania</option>
+                            <option value="en_MU">Mauritius</option>
+                            <option value="fr_YT">Mayotte</option>
+                            <option value="es_MX">Mexico</option>
+                            <option value="en_FM">Micronesia</option>
+                            <option value="ro_MD">Moldova</option>
+                            <option value="fr_MC">Monaco</option>
+                            <option value="mn_MN">Mongolia</option>
+                            <option value="en_MS">Montserrat</option>
+                            <option value="ar_MA">Morocco</option>
+                            <option value="pt_MZ">Mozambique</option>
+                            <option value="my_MM">Myanmar</option>
+                            <option value="en_NA">Namibia</option>
+                            <option value="en_NR">Nauru</option>
+                            <option value="ne_NP">Nepal</option>
+                            <option value="nl_NL">Netherlands</option>
+                            <option value="nl_AN">Netherlands Antilles</option>
+                            <option value="fr_NC">New Caledonia</option>
+                            <option value="en_NZ">New Zealand</option>
+                            <option value="es_NI">Nicaragua</option>
+                            <option value="fr_NE">Niger</option>
+                            <option value="en_NG">Nigeria</option>
+                            <option value="en_NU">Niue</option>
+                            <option value="en_NF">Norfolk Island</option>
+                            <option value="ko_KP">North Korea</option>
+                            <option value="en_MP">Northern Mariana Islands</option>
+                            <option value="no_NO">Norway</option>
+                            <option value="ar_OM">Oman</option>
+                            <option value="en_PK">Pakistan</option>
+                            <option value="en_PW">Palau</option>
+                            <option value="ar_PS">Palestine</option>
+                            <option value="es_PA">Panama</option>
+                            <option value="en_PG">Papua New Guinea</option>
+                            <option value="es_PY">Paraguay</option>
+                            <option value="es_PE">Peru</option>
+                            <option value="en_PH">Philippines</option>
+                            <option value="en_PN">Pitcairn</option>
+                            <option value="pl_PL">Poland</option>
+                            <option value="pt_PT">Portugal</option>
+                            <option value="es_PR">Puerto Rico</option>
+                            <option value="ar_QA">Qatar</option>
+                            <option value="fr_RE">Reunion</option>
+                            <option value="ro_RO">Romania</option>
+                            <option value="ru_RU">Russia</option>
+                            <option value="rw_RW">Rwanda</option>
+                            <option value="en_SH">Saint Helena</option>
+                            <option value="en_KN">Saint Kitts And Nevis</option>
+                            <option value="en_LC">Saint Lucia</option>
+                            <option value="fr_PM">Saint Pierre And Miquelon</option>
+                            <option value="en_VC">Saint Vincent And The Grenadines</option>
+                            <option value="en_WS">Samoa</option>
+                            <option value="it_SM">San Marino</option>
+                            <option value="pt_ST">Sao Tome And Principe</option>
+                            <option value="ar_SA">Saudi Arabia</option>
+                            <option value="fr_SN">Senegal</option>
+                            <option value="sr_CS">Serbia and Montenegro</option>
+                            <option value="en_SC">Seychelles</option>
+                            <option value="en_SL">Sierra Leone</option>
+                            <option value="en_SG">Singapore</option>
+                            <option value="sk_SK">Slovakia</option>
+                            <option value="sl_SI">Slovenia</option>
+                            <option value="en_SB">Solomon Islands</option>
+                            <option value="so_SO">Somalia</option>
+                            <option value="en_ZA">South Africa</option>
+                            <option value="en_GS">South Georgia And The South Sandwich Islands</option>
+                            <option value="ko_KR">South Korea</option>
+                            <option value="ca_ES">Spain(Catalan)</option>
+                            <option value="es_ES">Spain(Spanish)</option>
+                            <option value="si_LK">Sri Lanka</option>
+                            <option value="ar_SD">Sudan</option>
+                            <option value="nl_SR">Suriname</option>
+                            <option value="no_SJ">Svalbard And Jan Mayen</option>
+                            <option value="en_SZ">Swaziland</option>
+                            <option value="sv_SE">Sweden</option>
+                            <option value="fr_CH">Switzerland(French)</option>
+                            <option value="de_CH">Switzerland(German)</option>
+                            <option value="it_CH">Switzerland(Italian)</option>
+                            <option value="ar_SY">Syria</option>
+                            <option value="zh_TW">Taiwan</option>
+                            <option value="fa_TJ">Tajikistan</option>
+                            <option value="sw_TZ">Tanzania</option>
+                            <option value="th_TH">Thailand</option>
+                            <option value="fr_CD">The Democratic Republic Of Congo</option>
+                            <option value="pt_TL">TimorLeste</option>
+                            <option value="fr_TG">Togo</option>
+                            <option value="en_TK">Tokelau</option>
+                            <option value="to_TO">Tonga</option>
+                            <option value="en_TT">Trinidad and Tobago</option>
+                            <option value="ar_TN">Tunisia</option>
+                            <option value="tr_TR">Turkey</option>
+                            <option value="tk_TM">Turkmenistan</option>
+                            <option value="en_TC">Turks And Caicos Islands</option>
+                            <option value="en_TV">Tuvalu</option>
+                            <option value="en_VI">Virgin Islands</option>
+                            <option value="en_UG">Uganda</option>
+                            <option value="uk_UA">Ukraine</option>
+                            <option value="ar_AE">United Arab Emirates</option>
+                            <option value="en_GB">United Kingdom</option>
+                            <option value="en_US">United States</option>
+                            <option value="en_UM">United States Minor Outlying Islands</option>
+                            <option value="es_UY">Uruguay</option>
+                            <option value="uz_UZ">Uzbekistan</option>
+                            <option value="bi_VU">Vanuatu</option>
+                            <option value="it_VA">Vatican</option>
+                            <option value="es_VE">Venezuela</option>
+                            <option value="vi_VN">Vietnam</option>
+                            <option value="fr_WF">Wallis And Futuna</option>
+                            <option value="ar_EH">Western Sahara</option>
+                            <option value="ar_YE">Yemen</option>
+                            <option value="en_ZM">Zambia</option>
+                            <option value="en_ZW">Zimbabwe</option>
+                            <option value="sv_AX">Aland Islands</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> State / Province </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> City </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Zip / Postal Code </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Office Phone </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Mobile </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Fax </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Website </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> User Status </div>
+                        <div class="box_panel float_left">
+                          <div class="active_user"> Active </div>
+                          <div class="inactive_user" style="display:none"> In-active </div>
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Logo </div>
+                        <div class="box_panel float_left">
+                          <div class="setup_logo"> <img src="images/logo.png" alt="" title="" /> </div>
+                          <div class="edit_logo_setup"> <a href="#"><img src="images/blank.gif" alt="" title="" /></a> </div>
+                          <div class="delete_logo_setup"> <a href="#"><img src="images/blank.gif" alt="" title="" /></a> </div>
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Business Hours </div>
+                        <div class="box_panel bussiness_hours float_left">
+                          <input type="text" alt="" title="" id="bussiness_1" />
+                          <span class="bussiness_to">To</span>
+                          <input type="text" alt="" title="" id="bussiness_2" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-a-3">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Language </div>
+                        <div class="box_panel">
+                          <select name="Language" id="language_setup">
+                            <option value="en_US">English (United States)</option>
+<option value="en_GB" selected="">English (United Kingdom)</option>
+<option value="zh_CN">Chinese (China)</option>
+<option value="zh_TW">Chinese (Taiwan)</option>
+<option value="nl_NL">Nederlands</option>
+<option value="fr_FR">français</option>
+<option value="de_DE">Deutsch</option>
+<option value="hu_HU">magyar</option>
+<option value="it_IT">italiano</option>
+<option value="ja_JP">???</option>
+<option value="pl_PL">polski</option>
+<option value="pt_BR">Portuguese (Brazil)</option>
+<option value="pt_PT">Portuguese (Portugal)</option>
+<option value="ru_RU">???????</option>
+<option value="es_ES">español</option>
+<option value="sv_SE">svenska</option>
+<option value="tr_TR">Türkçe</option>
+<option value="vi_VN">Ti?ng Vi?t</option>
+<option value="ko_KR">???</option>
+<option value="iw_IL">?????</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Time Zone </div>
+                        <div class="box_panel">
+                          <select name="Time Zone" id="time_zone_setup">
+                            <option value="Etc/GMT+12">(GMT -12:0 ) GMT-12:00( Etc/GMT+12 )</option>
+<option value="Etc/GMT+11">(GMT -11:0 ) GMT-11:00( Etc/GMT+11 )</option>
+<option value="MIT">(GMT -11:0 ) West Samoa Time( MIT )</option>
+<option value="Pacific/Apia">(GMT -11:0 ) West Samoa Time( Pacific/Apia )</option>
+<option value="Pacific/Midway">(GMT -11:0 ) Samoa Standard Time( Pacific/Midway )</option>
+<option value="Pacific/Niue">(GMT -11:0 ) Niue Time( Pacific/Niue )</option>
+<option value="Pacific/Pago_Pago">(GMT -11:0 ) Samoa Standard Time( Pacific/Pago_Pago )</option>
+<option value="Pacific/Samoa">(GMT -11:0 ) Samoa Standard Time( Pacific/Samoa )</option>
+<option value="US/Samoa">(GMT -11:0 ) Samoa Standard Time( US/Samoa )</option>
+<option value="America/Adak">(GMT -10:0 ) Hawaii-Aleutian Standard Time( America/Adak )</option>
+<option value="America/Atka">(GMT -10:0 ) Hawaii-Aleutian Standard Time( America/Atka )</option>
+<option value="Etc/GMT+10">(GMT -10:0 ) GMT-10:00( Etc/GMT+10 )</option>
+<option value="HST">(GMT -10:0 ) Hawaii Standard Time( HST )</option>
+<option value="Pacific/Fakaofo">(GMT -10:0 ) Tokelau Time( Pacific/Fakaofo )</option>
+<option value="Pacific/Honolulu">(GMT -10:0 ) Hawaii Standard Time( Pacific/Honolulu )</option>
+<option value="Pacific/Johnston">(GMT -10:0 ) Hawaii Standard Time( Pacific/Johnston )</option>
+<option value="Pacific/Rarotonga">(GMT -10:0 ) Cook Is. Time( Pacific/Rarotonga )</option>
+<option value="Pacific/Tahiti">(GMT -10:0 ) Tahiti Time( Pacific/Tahiti )</option>
+<option value="SystemV/HST10">(GMT -10:0 ) Hawaii Standard Time( SystemV/HST10 )</option>
+<option value="US/Aleutian">(GMT -10:0 ) Hawaii-Aleutian Standard Time( US/Aleutian )</option>
+<option value="US/Hawaii">(GMT -10:0 ) Hawaii Standard Time( US/Hawaii )</option>
+<option value="Pacific/Marquesas">(GMT -9:30 ) Marquesas Time( Pacific/Marquesas )</option>
+<option value="AST">(GMT -9:0 ) Alaska Standard Time( AST )</option>
+<option value="America/Anchorage">(GMT -9:0 ) Alaska Standard Time( America/Anchorage )</option>
+<option value="America/Juneau">(GMT -9:0 ) Alaska Standard Time( America/Juneau )</option>
+<option value="America/Nome">(GMT -9:0 ) Alaska Standard Time( America/Nome )</option>
+<option value="America/Yakutat">(GMT -9:0 ) Alaska Standard Time( America/Yakutat )</option>
+<option value="Etc/GMT+9">(GMT -9:0 ) GMT-09:00( Etc/GMT+9 )</option>
+<option value="Pacific/Gambier">(GMT -9:0 ) Gambier Time( Pacific/Gambier )</option>
+<option value="SystemV/YST9">(GMT -9:0 ) Alaska Standard Time( SystemV/YST9 )</option>
+<option value="SystemV/YST9YDT">(GMT -9:0 ) Alaska Standard Time( SystemV/YST9YDT )</option>
+<option value="US/Alaska">(GMT -9:0 ) Alaska Standard Time( US/Alaska )</option>
+<option value="America/Dawson">(GMT -8:0 ) Pacific Standard Time( America/Dawson )</option>
+<option value="America/Ensenada">(GMT -8:0 ) Pacific Standard Time( America/Ensenada )</option>
+<option value="America/Los_Angeles">(GMT -8:0 ) Pacific Standard Time( America/Los_Angeles )</option>
+<option value="America/Santa_Isabel">(GMT -8:0 ) GMT-08:00( America/Santa_Isabel )</option>
+<option value="America/Tijuana">(GMT -8:0 ) Pacific Standard Time( America/Tijuana )</option>
+<option value="America/Vancouver">(GMT -8:0 ) Pacific Standard Time( America/Vancouver )</option>
+<option value="America/Whitehorse">(GMT -8:0 ) Pacific Standard Time( America/Whitehorse )</option>
+<option value="Canada/Pacific">(GMT -8:0 ) Pacific Standard Time( Canada/Pacific )</option>
+<option value="Canada/Yukon">(GMT -8:0 ) Pacific Standard Time( Canada/Yukon )</option>
+<option value="Etc/GMT+8">(GMT -8:0 ) GMT-08:00( Etc/GMT+8 )</option>
+<option value="Mexico/BajaNorte">(GMT -8:0 ) Pacific Standard Time( Mexico/BajaNorte )</option>
+<option value="PST">(GMT -8:0 ) Pacific Standard Time( PST )</option>
+<option value="PST8PDT">(GMT -8:0 ) Pacific Standard Time( PST8PDT )</option>
+<option value="Pacific/Pitcairn">(GMT -8:0 ) Pitcairn Standard Time( Pacific/Pitcairn )</option>
+<option value="SystemV/PST8">(GMT -8:0 ) Pacific Standard Time( SystemV/PST8 )</option>
+<option value="SystemV/PST8PDT">(GMT -8:0 ) Pacific Standard Time( SystemV/PST8PDT )</option>
+<option value="US/Pacific">(GMT -8:0 ) Pacific Standard Time( US/Pacific )</option>
+<option value="US/Pacific-New">(GMT -8:0 ) Pacific Standard Time( US/Pacific-New )</option>
+<option value="America/Boise">(GMT -7:0 ) Mountain Standard Time( America/Boise )</option>
+<option value="America/Cambridge_Bay">(GMT -7:0 ) Mountain Standard Time( America/Cambridge_Bay )</option>
+<option value="America/Chihuahua">(GMT -7:0 ) Mountain Standard Time( America/Chihuahua )</option>
+<option value="America/Dawson_Creek">(GMT -7:0 ) Mountain Standard Time( America/Dawson_Creek )</option>
+<option value="America/Denver">(GMT -7:0 ) Mountain Standard Time( America/Denver )</option>
+<option value="America/Edmonton">(GMT -7:0 ) Mountain Standard Time( America/Edmonton )</option>
+<option value="America/Hermosillo">(GMT -7:0 ) Mountain Standard Time( America/Hermosillo )</option>
+<option value="America/Inuvik">(GMT -7:0 ) Mountain Standard Time( America/Inuvik )</option>
+<option value="America/Mazatlan">(GMT -7:0 ) Mountain Standard Time( America/Mazatlan )</option>
+<option value="America/Ojinaga">(GMT -7:0 ) GMT-07:00( America/Ojinaga )</option>
+<option value="America/Phoenix">(GMT -7:0 ) Mountain Standard Time( America/Phoenix )</option>
+<option value="America/Shiprock">(GMT -7:0 ) Mountain Standard Time( America/Shiprock )</option>
+<option value="America/Yellowknife">(GMT -7:0 ) Mountain Standard Time( America/Yellowknife )</option>
+<option value="Canada/Mountain">(GMT -7:0 ) Mountain Standard Time( Canada/Mountain )</option>
+<option value="Etc/GMT+7">(GMT -7:0 ) GMT-07:00( Etc/GMT+7 )</option>
+<option value="MST">(GMT -7:0 ) Mountain Standard Time( MST )</option>
+<option value="MST7MDT">(GMT -7:0 ) Mountain Standard Time( MST7MDT )</option>
+<option value="Mexico/BajaSur">(GMT -7:0 ) Mountain Standard Time( Mexico/BajaSur )</option>
+<option value="Navajo">(GMT -7:0 ) Mountain Standard Time( Navajo )</option>
+<option value="PNT">(GMT -7:0 ) Mountain Standard Time( PNT )</option>
+<option value="SystemV/MST7">(GMT -7:0 ) Mountain Standard Time( SystemV/MST7 )</option>
+<option value="SystemV/MST7MDT">(GMT -7:0 ) Mountain Standard Time( SystemV/MST7MDT )</option>
+<option value="US/Arizona">(GMT -7:0 ) Mountain Standard Time( US/Arizona )</option>
+<option value="US/Mountain">(GMT -7:0 ) Mountain Standard Time( US/Mountain )</option>
+<option value="America/Belize">(GMT -6:0 ) Central Standard Time( America/Belize )</option>
+<option value="America/Cancun">(GMT -6:0 ) Central Standard Time( America/Cancun )</option>
+<option value="America/Chicago">(GMT -6:0 ) Central Standard Time( America/Chicago )</option>
+<option value="America/Costa_Rica">(GMT -6:0 ) Central Standard Time( America/Costa_Rica )</option>
+<option value="America/El_Salvador">(GMT -6:0 ) Central Standard Time( America/El_Salvador )</option>
+<option value="America/Guatemala">(GMT -6:0 ) Central Standard Time( America/Guatemala )</option>
+<option value="America/Indiana/Knox">(GMT -6:0 ) Central Standard Time( America/Indiana/Knox )</option>
+<option value="America/Indiana/Tell_City">(GMT -6:0 ) Central Standard Time( America/Indiana/Tell_City )</option>
+<option value="America/Knox_IN">(GMT -6:0 ) Central Standard Time( America/Knox_IN )</option>
+<option value="America/Managua">(GMT -6:0 ) Central Standard Time( America/Managua )</option>
+<option value="America/Matamoros">(GMT -6:0 ) GMT-06:00( America/Matamoros )</option>
+<option value="America/Menominee">(GMT -6:0 ) Central Standard Time( America/Menominee )</option>
+<option value="America/Merida">(GMT -6:0 ) Central Standard Time( America/Merida )</option>
+<option value="America/Mexico_City">(GMT -6:0 ) Central Standard Time( America/Mexico_City )</option>
+<option value="America/Monterrey">(GMT -6:0 ) Central Standard Time( America/Monterrey )</option>
+<option value="America/North_Dakota/Center">(GMT -6:0 ) Central Standard Time( America/North_Dakota/Center )</option>
+<option value="America/North_Dakota/New_Salem">(GMT -6:0 ) Central Standard Time( America/North_Dakota/New_Salem )</option>
+<option value="America/Rainy_River">(GMT -6:0 ) Central Standard Time( America/Rainy_River )</option>
+<option value="America/Rankin_Inlet">(GMT -6:0 ) Central Standard Time( America/Rankin_Inlet )</option>
+<option value="America/Regina">(GMT -6:0 ) Central Standard Time( America/Regina )</option>
+<option value="America/Swift_Current">(GMT -6:0 ) Central Standard Time( America/Swift_Current )</option>
+<option value="America/Tegucigalpa">(GMT -6:0 ) Central Standard Time( America/Tegucigalpa )</option>
+<option value="America/Winnipeg">(GMT -6:0 ) Central Standard Time( America/Winnipeg )</option>
+<option value="CST">(GMT -6:0 ) Central Standard Time( CST )</option>
+<option value="CST6CDT">(GMT -6:0 ) Central Standard Time( CST6CDT )</option>
+<option value="Canada/Central">(GMT -6:0 ) Central Standard Time( Canada/Central )</option>
+<option value="Canada/East-Saskatchewan">(GMT -6:0 ) Central Standard Time( Canada/East-Saskatchewan )</option>
+<option value="Canada/Saskatchewan">(GMT -6:0 ) Central Standard Time( Canada/Saskatchewan )</option>
+<option value="Chile/EasterIsland">(GMT -6:0 ) Easter Is. Summer Time( Chile/EasterIsland )</option>
+<option value="Etc/GMT+6">(GMT -6:0 ) GMT-06:00( Etc/GMT+6 )</option>
+<option value="Mexico/General">(GMT -6:0 ) Central Standard Time( Mexico/General )</option>
+<option value="Pacific/Easter">(GMT -6:0 ) Easter Is. Summer Time( Pacific/Easter )</option>
+<option value="Pacific/Galapagos">(GMT -6:0 ) Galapagos Time( Pacific/Galapagos )</option>
+<option value="SystemV/CST6">(GMT -6:0 ) Central Standard Time( SystemV/CST6 )</option>
+<option value="SystemV/CST6CDT">(GMT -6:0 ) Central Standard Time( SystemV/CST6CDT )</option>
+<option value="US/Central">(GMT -6:0 ) Central Standard Time( US/Central )</option>
+<option value="US/Indiana-Starke">(GMT -6:0 ) Central Standard Time( US/Indiana-Starke )</option>
+<option value="America/Atikokan">(GMT -5:0 ) Eastern Standard Time( America/Atikokan )</option>
+<option value="America/Bogota">(GMT -5:0 ) Colombia Time( America/Bogota )</option>
+<option value="America/Cayman">(GMT -5:0 ) Eastern Standard Time( America/Cayman )</option>
+<option value="America/Coral_Harbour">(GMT -5:0 ) Eastern Standard Time( America/Coral_Harbour )</option>
+<option value="America/Detroit">(GMT -5:0 ) Eastern Standard Time( America/Detroit )</option>
+<option value="America/Fort_Wayne">(GMT -5:0 ) Eastern Standard Time( America/Fort_Wayne )</option>
+<option value="America/Grand_Turk">(GMT -5:0 ) Eastern Standard Time( America/Grand_Turk )</option>
+<option value="America/Guayaquil">(GMT -5:0 ) Ecuador Time( America/Guayaquil )</option>
+<option value="America/Havana">(GMT -5:0 ) Cuba Standard Time( America/Havana )</option>
+<option value="America/Indiana/Indianapolis">(GMT -5:0 ) Eastern Standard Time( America/Indiana/Indianapolis )</option>
+<option value="America/Indiana/Marengo">(GMT -5:0 ) Eastern Standard Time( America/Indiana/Marengo )</option>
+<option value="America/Indiana/Petersburg">(GMT -5:0 ) Eastern Standard Time( America/Indiana/Petersburg )</option>
+<option value="America/Indiana/Vevay">(GMT -5:0 ) Eastern Standard Time( America/Indiana/Vevay )</option>
+<option value="America/Indiana/Vincennes">(GMT -5:0 ) Eastern Standard Time( America/Indiana/Vincennes )</option>
+<option value="America/Indiana/Winamac">(GMT -5:0 ) Eastern Standard Time( America/Indiana/Winamac )</option>
+<option value="America/Indianapolis">(GMT -5:0 ) Eastern Standard Time( America/Indianapolis )</option>
+<option value="America/Iqaluit">(GMT -5:0 ) Eastern Standard Time( America/Iqaluit )</option>
+<option value="America/Jamaica">(GMT -5:0 ) Eastern Standard Time( America/Jamaica )</option>
+<option value="America/Kentucky/Louisville">(GMT -5:0 ) Eastern Standard Time( America/Kentucky/Louisville )</option>
+<option value="America/Kentucky/Monticello">(GMT -5:0 ) Eastern Standard Time( America/Kentucky/Monticello )</option>
+<option value="America/Lima">(GMT -5:0 ) Peru Time( America/Lima )</option>
+<option value="America/Louisville">(GMT -5:0 ) Eastern Standard Time( America/Louisville )</option>
+<option value="America/Montreal">(GMT -5:0 ) Eastern Standard Time( America/Montreal )</option>
+<option value="America/Nassau">(GMT -5:0 ) Eastern Standard Time( America/Nassau )</option>
+<option value="America/New_York">(GMT -5:0 ) Eastern Standard Time( America/New_York )</option>
+<option value="America/Nipigon">(GMT -5:0 ) Eastern Standard Time( America/Nipigon )</option>
+<option value="America/Panama">(GMT -5:0 ) Eastern Standard Time( America/Panama )</option>
+<option value="America/Pangnirtung">(GMT -5:0 ) Eastern Standard Time( America/Pangnirtung )</option>
+<option value="America/Port-au-Prince">(GMT -5:0 ) Eastern Standard Time( America/Port-au-Prince )</option>
+<option value="America/Resolute">(GMT -5:0 ) Eastern Standard Time( America/Resolute )</option>
+<option value="America/Thunder_Bay">(GMT -5:0 ) Eastern Standard Time( America/Thunder_Bay )</option>
+<option value="America/Toronto">(GMT -5:0 ) Eastern Standard Time( America/Toronto )</option>
+<option value="Canada/Eastern">(GMT -5:0 ) Eastern Standard Time( Canada/Eastern )</option>
+<option value="Cuba">(GMT -5:0 ) Cuba Standard Time( Cuba )</option>
+<option value="EST">(GMT -5:0 ) Eastern Standard Time( EST )</option>
+<option value="EST5EDT">(GMT -5:0 ) Eastern Standard Time( EST5EDT )</option>
+<option value="Etc/GMT+5">(GMT -5:0 ) GMT-05:00( Etc/GMT+5 )</option>
+<option value="IET">(GMT -5:0 ) Eastern Standard Time( IET )</option>
+<option value="Jamaica">(GMT -5:0 ) Eastern Standard Time( Jamaica )</option>
+<option value="SystemV/EST5">(GMT -5:0 ) Eastern Standard Time( SystemV/EST5 )</option>
+<option value="SystemV/EST5EDT">(GMT -5:0 ) Eastern Standard Time( SystemV/EST5EDT )</option>
+<option value="US/East-Indiana">(GMT -5:0 ) Eastern Standard Time( US/East-Indiana )</option>
+<option value="US/Eastern">(GMT -5:0 ) Eastern Standard Time( US/Eastern )</option>
+<option value="US/Michigan">(GMT -5:0 ) Eastern Standard Time( US/Michigan )</option>
+<option value="America/Caracas">(GMT -4:30 ) Venezuela Time( America/Caracas )</option>
+<option value="America/Anguilla">(GMT -4:0 ) Atlantic Standard Time( America/Anguilla )</option>
+<option value="America/Antigua">(GMT -4:0 ) Atlantic Standard Time( America/Antigua )</option>
+<option value="America/Argentina/San_Luis">(GMT -4:0 ) Western Argentine Summer Time( America/Argentina/San_Luis )</option>
+<option value="America/Aruba">(GMT -4:0 ) Atlantic Standard Time( America/Aruba )</option>
+<option value="America/Asuncion">(GMT -4:0 ) Paraguay Summer Time( America/Asuncion )</option>
+<option value="America/Barbados">(GMT -4:0 ) Atlantic Standard Time( America/Barbados )</option>
+<option value="America/Blanc-Sablon">(GMT -4:0 ) Atlantic Standard Time( America/Blanc-Sablon )</option>
+<option value="America/Boa_Vista">(GMT -4:0 ) Amazon Time( America/Boa_Vista )</option>
+<option value="America/Campo_Grande">(GMT -4:0 ) Amazon Time( America/Campo_Grande )</option>
+<option value="America/Cuiaba">(GMT -4:0 ) Amazon Time( America/Cuiaba )</option>
+<option value="America/Curacao">(GMT -4:0 ) Atlantic Standard Time( America/Curacao )</option>
+<option value="America/Dominica">(GMT -4:0 ) Atlantic Standard Time( America/Dominica )</option>
+<option value="America/Eirunepe">(GMT -4:0 ) Amazon Time( America/Eirunepe )</option>
+<option value="America/Glace_Bay">(GMT -4:0 ) Atlantic Standard Time( America/Glace_Bay )</option>
+<option value="America/Goose_Bay">(GMT -4:0 ) Atlantic Standard Time( America/Goose_Bay )</option>
+<option value="America/Grenada">(GMT -4:0 ) Atlantic Standard Time( America/Grenada )</option>
+<option value="America/Guadeloupe">(GMT -4:0 ) Atlantic Standard Time( America/Guadeloupe )</option>
+<option value="America/Guyana">(GMT -4:0 ) Guyana Time( America/Guyana )</option>
+<option value="America/Halifax">(GMT -4:0 ) Atlantic Standard Time( America/Halifax )</option>
+<option value="America/La_Paz">(GMT -4:0 ) Bolivia Time( America/La_Paz )</option>
+<option value="America/Manaus">(GMT -4:0 ) Amazon Time( America/Manaus )</option>
+<option value="America/Marigot">(GMT -4:0 ) Atlantic Standard Time( America/Marigot )</option>
+<option value="America/Martinique">(GMT -4:0 ) Atlantic Standard Time( America/Martinique )</option>
+<option value="America/Moncton">(GMT -4:0 ) Atlantic Standard Time( America/Moncton )</option>
+<option value="America/Montserrat">(GMT -4:0 ) Atlantic Standard Time( America/Montserrat )</option>
+<option value="America/Port_of_Spain">(GMT -4:0 ) Atlantic Standard Time( America/Port_of_Spain )</option>
+<option value="America/Porto_Acre">(GMT -4:0 ) Amazon Time( America/Porto_Acre )</option>
+<option value="America/Porto_Velho">(GMT -4:0 ) Amazon Time( America/Porto_Velho )</option>
+<option value="America/Puerto_Rico">(GMT -4:0 ) Atlantic Standard Time( America/Puerto_Rico )</option>
+<option value="America/Rio_Branco">(GMT -4:0 ) Amazon Time( America/Rio_Branco )</option>
+<option value="America/Santiago">(GMT -4:0 ) Chile Summer Time( America/Santiago )</option>
+<option value="America/Santo_Domingo">(GMT -4:0 ) Atlantic Standard Time( America/Santo_Domingo )</option>
+<option value="America/St_Barthelemy">(GMT -4:0 ) Atlantic Standard Time( America/St_Barthelemy )</option>
+<option value="America/St_Kitts">(GMT -4:0 ) Atlantic Standard Time( America/St_Kitts )</option>
+<option value="America/St_Lucia">(GMT -4:0 ) Atlantic Standard Time( America/St_Lucia )</option>
+<option value="America/St_Thomas">(GMT -4:0 ) Atlantic Standard Time( America/St_Thomas )</option>
+<option value="America/St_Vincent">(GMT -4:0 ) Atlantic Standard Time( America/St_Vincent )</option>
+<option value="America/Thule">(GMT -4:0 ) Atlantic Standard Time( America/Thule )</option>
+<option value="America/Tortola">(GMT -4:0 ) Atlantic Standard Time( America/Tortola )</option>
+<option value="America/Virgin">(GMT -4:0 ) Atlantic Standard Time( America/Virgin )</option>
+<option value="Antarctica/Palmer">(GMT -4:0 ) Chile Summer Time( Antarctica/Palmer )</option>
+<option value="Atlantic/Bermuda">(GMT -4:0 ) Atlantic Standard Time( Atlantic/Bermuda )</option>
+<option value="Atlantic/Stanley">(GMT -4:0 ) Falkland Is. Summer Time( Atlantic/Stanley )</option>
+<option value="Brazil/Acre">(GMT -4:0 ) Amazon Time( Brazil/Acre )</option>
+<option value="Brazil/West">(GMT -4:0 ) Amazon Time( Brazil/West )</option>
+<option value="Canada/Atlantic">(GMT -4:0 ) Atlantic Standard Time( Canada/Atlantic )</option>
+<option value="Chile/Continental">(GMT -4:0 ) Chile Summer Time( Chile/Continental )</option>
+<option value="Etc/GMT+4">(GMT -4:0 ) GMT-04:00( Etc/GMT+4 )</option>
+<option value="PRT">(GMT -4:0 ) Atlantic Standard Time( PRT )</option>
+<option value="SystemV/AST4">(GMT -4:0 ) Atlantic Standard Time( SystemV/AST4 )</option>
+<option value="SystemV/AST4ADT">(GMT -4:0 ) Atlantic Standard Time( SystemV/AST4ADT )</option>
+<option value="America/St_Johns">(GMT -3:30 ) Newfoundland Standard Time( America/St_Johns )</option>
+<option value="CNT">(GMT -3:30 ) Newfoundland Standard Time( CNT )</option>
+<option value="Canada/Newfoundland">(GMT -3:30 ) Newfoundland Standard Time( Canada/Newfoundland )</option>
+<option value="AGT">(GMT -3:0 ) Argentine Time( AGT )</option>
+<option value="America/Araguaina">(GMT -3:0 ) Brasilia Time( America/Araguaina )</option>
+<option value="America/Argentina/Buenos_Aires">(GMT -3:0 ) Argentine Time( America/Argentina/Buenos_Aires )</option>
+<option value="America/Argentina/Catamarca">(GMT -3:0 ) Argentine Time( America/Argentina/Catamarca )</option>
+<option value="America/Argentina/ComodRivadavia">(GMT -3:0 ) Argentine Time( America/Argentina/ComodRivadavia )</option>
+<option value="America/Argentina/Cordoba">(GMT -3:0 ) Argentine Time( America/Argentina/Cordoba )</option>
+<option value="America/Argentina/Jujuy">(GMT -3:0 ) Argentine Time( America/Argentina/Jujuy )</option>
+<option value="America/Argentina/La_Rioja">(GMT -3:0 ) Argentine Time( America/Argentina/La_Rioja )</option>
+<option value="America/Argentina/Mendoza">(GMT -3:0 ) Argentine Time( America/Argentina/Mendoza )</option>
+<option value="America/Argentina/Rio_Gallegos">(GMT -3:0 ) Argentine Time( America/Argentina/Rio_Gallegos )</option>
+<option value="America/Argentina/Salta">(GMT -3:0 ) Argentine Time( America/Argentina/Salta )</option>
+<option value="America/Argentina/San_Juan">(GMT -3:0 ) Argentine Time( America/Argentina/San_Juan )</option>
+<option value="America/Argentina/Tucuman">(GMT -3:0 ) Argentine Time( America/Argentina/Tucuman )</option>
+<option value="America/Argentina/Ushuaia">(GMT -3:0 ) Argentine Time( America/Argentina/Ushuaia )</option>
+<option value="America/Bahia">(GMT -3:0 ) Brasilia Time( America/Bahia )</option>
+<option value="America/Belem">(GMT -3:0 ) Brasilia Time( America/Belem )</option>
+<option value="America/Buenos_Aires">(GMT -3:0 ) Argentine Time( America/Buenos_Aires )</option>
+<option value="America/Catamarca">(GMT -3:0 ) Argentine Time( America/Catamarca )</option>
+<option value="America/Cayenne">(GMT -3:0 ) French Guiana Time( America/Cayenne )</option>
+<option value="America/Cordoba">(GMT -3:0 ) Argentine Time( America/Cordoba )</option>
+<option value="America/Fortaleza">(GMT -3:0 ) Brasilia Time( America/Fortaleza )</option>
+<option value="America/Godthab">(GMT -3:0 ) Western Greenland Time( America/Godthab )</option>
+<option value="America/Jujuy">(GMT -3:0 ) Argentine Time( America/Jujuy )</option>
+<option value="America/Maceio">(GMT -3:0 ) Brasilia Time( America/Maceio )</option>
+<option value="America/Mendoza">(GMT -3:0 ) Argentine Time( America/Mendoza )</option>
+<option value="America/Miquelon">(GMT -3:0 ) Pierre &amp; Miquelon Standard Time( America/Miquelon )</option>
+<option value="America/Montevideo">(GMT -3:0 ) Uruguay Summer Time( America/Montevideo )</option>
+<option value="America/Paramaribo">(GMT -3:0 ) Suriname Time( America/Paramaribo )</option>
+<option value="America/Recife">(GMT -3:0 ) Brasilia Time( America/Recife )</option>
+<option value="America/Rosario">(GMT -3:0 ) Argentine Time( America/Rosario )</option>
+<option value="America/Santarem">(GMT -3:0 ) Brasilia Time( America/Santarem )</option>
+<option value="America/Sao_Paulo">(GMT -3:0 ) Brasilia Time( America/Sao_Paulo )</option>
+<option value="Antarctica/Rothera">(GMT -3:0 ) Rothera Time( Antarctica/Rothera )</option>
+<option value="BET">(GMT -3:0 ) Brasilia Time( BET )</option>
+<option value="Brazil/East">(GMT -3:0 ) Brasilia Time( Brazil/East )</option>
+<option value="Etc/GMT+3">(GMT -3:0 ) GMT-03:00( Etc/GMT+3 )</option>
+<option value="America/Noronha">(GMT -2:0 ) Fernando de Noronha Time( America/Noronha )</option>
+<option value="Atlantic/South_Georgia">(GMT -2:0 ) South Georgia Standard Time( Atlantic/South_Georgia )</option>
+<option value="Brazil/DeNoronha">(GMT -2:0 ) Fernando de Noronha Time( Brazil/DeNoronha )</option>
+<option value="Etc/GMT+2">(GMT -2:0 ) GMT-02:00( Etc/GMT+2 )</option>
+<option value="America/Scoresbysund">(GMT -1:0 ) Eastern Greenland Time( America/Scoresbysund )</option>
+<option value="Atlantic/Azores">(GMT -1:0 ) Azores Time( Atlantic/Azores )</option>
+<option value="Atlantic/Cape_Verde">(GMT -1:0 ) Cape Verde Time( Atlantic/Cape_Verde )</option>
+<option value="Etc/GMT+1">(GMT -1:0 ) GMT-01:00( Etc/GMT+1 )</option>
+<option value="Africa/Abidjan">(GMT 0:0 ) Greenwich Mean Time( Africa/Abidjan )</option>
+<option value="Africa/Accra">(GMT 0:0 ) Ghana Mean Time( Africa/Accra )</option>
+<option value="Africa/Bamako">(GMT 0:0 ) Greenwich Mean Time( Africa/Bamako )</option>
+<option value="Africa/Banjul">(GMT 0:0 ) Greenwich Mean Time( Africa/Banjul )</option>
+<option value="Africa/Bissau">(GMT 0:0 ) Greenwich Mean Time( Africa/Bissau )</option>
+<option value="Africa/Casablanca">(GMT 0:0 ) Western European Time( Africa/Casablanca )</option>
+<option value="Africa/Conakry">(GMT 0:0 ) Greenwich Mean Time( Africa/Conakry )</option>
+<option value="Africa/Dakar">(GMT 0:0 ) Greenwich Mean Time( Africa/Dakar )</option>
+<option value="Africa/El_Aaiun">(GMT 0:0 ) Western European Time( Africa/El_Aaiun )</option>
+<option value="Africa/Freetown">(GMT 0:0 ) Greenwich Mean Time( Africa/Freetown )</option>
+<option value="Africa/Lome">(GMT 0:0 ) Greenwich Mean Time( Africa/Lome )</option>
+<option value="Africa/Monrovia">(GMT 0:0 ) Greenwich Mean Time( Africa/Monrovia )</option>
+<option value="Africa/Nouakchott">(GMT 0:0 ) Greenwich Mean Time( Africa/Nouakchott )</option>
+<option value="Africa/Ouagadougou">(GMT 0:0 ) Greenwich Mean Time( Africa/Ouagadougou )</option>
+<option value="Africa/Sao_Tome">(GMT 0:0 ) Greenwich Mean Time( Africa/Sao_Tome )</option>
+<option value="Africa/Timbuktu">(GMT 0:0 ) Greenwich Mean Time( Africa/Timbuktu )</option>
+<option value="America/Danmarkshavn">(GMT 0:0 ) Greenwich Mean Time( America/Danmarkshavn )</option>
+<option value="Atlantic/Canary">(GMT 0:0 ) Western European Time( Atlantic/Canary )</option>
+<option value="Atlantic/Faeroe">(GMT 0:0 ) Western European Time( Atlantic/Faeroe )</option>
+<option value="Atlantic/Faroe">(GMT 0:0 ) Western European Time( Atlantic/Faroe )</option>
+<option value="Atlantic/Madeira">(GMT 0:0 ) Western European Time( Atlantic/Madeira )</option>
+<option value="Atlantic/Reykjavik">(GMT 0:0 ) Greenwich Mean Time( Atlantic/Reykjavik )</option>
+<option value="Atlantic/St_Helena">(GMT 0:0 ) Greenwich Mean Time( Atlantic/St_Helena )</option>
+<option value="Eire">(GMT 0:0 ) Greenwich Mean Time( Eire )</option>
+<option value="Etc/GMT">(GMT 0:0 ) GMT+00:00( Etc/GMT )</option>
+<option value="Etc/GMT+0">(GMT 0:0 ) GMT+00:00( Etc/GMT+0 )</option>
+<option value="Etc/GMT-0">(GMT 0:0 ) GMT+00:00( Etc/GMT-0 )</option>
+<option value="Etc/GMT0">(GMT 0:0 ) GMT+00:00( Etc/GMT0 )</option>
+<option value="Etc/Greenwich">(GMT 0:0 ) Greenwich Mean Time( Etc/Greenwich )</option>
+<option value="Etc/UCT">(GMT 0:0 ) Coordinated Universal Time( Etc/UCT )</option>
+<option value="Etc/UTC">(GMT 0:0 ) Coordinated Universal Time( Etc/UTC )</option>
+<option value="Etc/Universal">(GMT 0:0 ) Coordinated Universal Time( Etc/Universal )</option>
+<option value="Etc/Zulu">(GMT 0:0 ) Coordinated Universal Time( Etc/Zulu )</option>
+<option value="Europe/Belfast">(GMT 0:0 ) Greenwich Mean Time( Europe/Belfast )</option>
+<option value="Europe/Dublin">(GMT 0:0 ) Greenwich Mean Time( Europe/Dublin )</option>
+<option value="Europe/Guernsey">(GMT 0:0 ) Greenwich Mean Time( Europe/Guernsey )</option>
+<option value="Europe/Isle_of_Man">(GMT 0:0 ) Greenwich Mean Time( Europe/Isle_of_Man )</option>
+<option value="Europe/Jersey">(GMT 0:0 ) Greenwich Mean Time( Europe/Jersey )</option>
+<option value="Europe/Lisbon">(GMT 0:0 ) Western European Time( Europe/Lisbon )</option>
+<option value="Europe/London">(GMT 0:0 ) Greenwich Mean Time( Europe/London )</option>
+<option value="GB">(GMT 0:0 ) Greenwich Mean Time( GB )</option>
+<option value="GB-Eire">(GMT 0:0 ) Greenwich Mean Time( GB-Eire )</option>
+<option value="GMT">(GMT 0:0 ) Greenwich Mean Time( GMT )</option>
+<option value="GMT0">(GMT 0:0 ) GMT+00:00( GMT0 )</option>
+<option value="Greenwich">(GMT 0:0 ) Greenwich Mean Time( Greenwich )</option>
+<option value="Iceland">(GMT 0:0 ) Greenwich Mean Time( Iceland )</option>
+<option value="Portugal">(GMT 0:0 ) Western European Time( Portugal )</option>
+<option value="UCT">(GMT 0:0 ) Coordinated Universal Time( UCT )</option>
+<option value="UTC">(GMT 0:0 ) Coordinated Universal Time( UTC )</option>
+<option value="Universal">(GMT 0:0 ) Coordinated Universal Time( Universal )</option>
+<option value="WET">(GMT 0:0 ) Western European Time( WET )</option>
+<option value="Zulu">(GMT 0:0 ) Coordinated Universal Time( Zulu )</option>
+<option value="Africa/Algiers">(GMT 1:0 ) Central European Time( Africa/Algiers )</option>
+<option value="Africa/Bangui">(GMT 1:0 ) Western African Time( Africa/Bangui )</option>
+<option value="Africa/Brazzaville">(GMT 1:0 ) Western African Time( Africa/Brazzaville )</option>
+<option value="Africa/Ceuta">(GMT 1:0 ) Central European Time( Africa/Ceuta )</option>
+<option value="Africa/Douala">(GMT 1:0 ) Western African Time( Africa/Douala )</option>
+<option value="Africa/Kinshasa">(GMT 1:0 ) Western African Time( Africa/Kinshasa )</option>
+<option value="Africa/Lagos">(GMT 1:0 ) Western African Time( Africa/Lagos )</option>
+<option value="Africa/Libreville">(GMT 1:0 ) Western African Time( Africa/Libreville )</option>
+<option value="Africa/Luanda">(GMT 1:0 ) Western African Time( Africa/Luanda )</option>
+<option value="Africa/Malabo">(GMT 1:0 ) Western African Time( Africa/Malabo )</option>
+<option value="Africa/Ndjamena">(GMT 1:0 ) Western African Time( Africa/Ndjamena )</option>
+<option value="Africa/Niamey">(GMT 1:0 ) Western African Time( Africa/Niamey )</option>
+<option value="Africa/Porto-Novo">(GMT 1:0 ) Western African Time( Africa/Porto-Novo )</option>
+<option value="Africa/Tunis">(GMT 1:0 ) Central European Time( Africa/Tunis )</option>
+<option value="Africa/Windhoek">(GMT 1:0 ) Western African Summer Time( Africa/Windhoek )</option>
+<option value="Arctic/Longyearbyen">(GMT 1:0 ) Central European Time( Arctic/Longyearbyen )</option>
+<option value="Atlantic/Jan_Mayen">(GMT 1:0 ) Central European Time( Atlantic/Jan_Mayen )</option>
+<option value="CET">(GMT 1:0 ) Central European Time( CET )</option>
+<option value="ECT">(GMT 1:0 ) Central European Time( ECT )</option>
+<option value="Etc/GMT-1">(GMT 1:0 ) GMT+01:00( Etc/GMT-1 )</option>
+<option value="Europe/Amsterdam">(GMT 1:0 ) Central European Time( Europe/Amsterdam )</option>
+<option value="Europe/Andorra">(GMT 1:0 ) Central European Time( Europe/Andorra )</option>
+<option value="Europe/Belgrade">(GMT 1:0 ) Central European Time( Europe/Belgrade )</option>
+<option value="Europe/Berlin">(GMT 1:0 ) Central European Time( Europe/Berlin )</option>
+<option value="Europe/Bratislava">(GMT 1:0 ) Central European Time( Europe/Bratislava )</option>
+<option value="Europe/Brussels">(GMT 1:0 ) Central European Time( Europe/Brussels )</option>
+<option value="Europe/Budapest">(GMT 1:0 ) Central European Time( Europe/Budapest )</option>
+<option value="Europe/Copenhagen">(GMT 1:0 ) Central European Time( Europe/Copenhagen )</option>
+<option value="Europe/Gibraltar">(GMT 1:0 ) Central European Time( Europe/Gibraltar )</option>
+<option value="Europe/Ljubljana">(GMT 1:0 ) Central European Time( Europe/Ljubljana )</option>
+<option value="Europe/Luxembourg">(GMT 1:0 ) Central European Time( Europe/Luxembourg )</option>
+<option value="Europe/Madrid">(GMT 1:0 ) Central European Time( Europe/Madrid )</option>
+<option value="Europe/Malta">(GMT 1:0 ) Central European Time( Europe/Malta )</option>
+<option value="Europe/Monaco">(GMT 1:0 ) Central European Time( Europe/Monaco )</option>
+<option value="Europe/Oslo">(GMT 1:0 ) Central European Time( Europe/Oslo )</option>
+<option value="Europe/Paris">(GMT 1:0 ) Central European Time( Europe/Paris )</option>
+<option value="Europe/Podgorica">(GMT 1:0 ) Central European Time( Europe/Podgorica )</option>
+<option value="Europe/Prague">(GMT 1:0 ) Central European Time( Europe/Prague )</option>
+<option value="Europe/Rome">(GMT 1:0 ) Central European Time( Europe/Rome )</option>
+<option value="Europe/San_Marino">(GMT 1:0 ) Central European Time( Europe/San_Marino )</option>
+<option value="Europe/Sarajevo">(GMT 1:0 ) Central European Time( Europe/Sarajevo )</option>
+<option value="Europe/Skopje">(GMT 1:0 ) Central European Time( Europe/Skopje )</option>
+<option value="Europe/Stockholm">(GMT 1:0 ) Central European Time( Europe/Stockholm )</option>
+<option value="Europe/Tirane">(GMT 1:0 ) Central European Time( Europe/Tirane )</option>
+<option value="Europe/Vaduz">(GMT 1:0 ) Central European Time( Europe/Vaduz )</option>
+<option value="Europe/Vatican">(GMT 1:0 ) Central European Time( Europe/Vatican )</option>
+<option value="Europe/Vienna">(GMT 1:0 ) Central European Time( Europe/Vienna )</option>
+<option value="Europe/Warsaw">(GMT 1:0 ) Central European Time( Europe/Warsaw )</option>
+<option value="Europe/Zagreb">(GMT 1:0 ) Central European Time( Europe/Zagreb )</option>
+<option value="Europe/Zurich">(GMT 1:0 ) Central European Time( Europe/Zurich )</option>
+<option value="MET">(GMT 1:0 ) Middle Europe Time( MET )</option>
+<option value="Poland">(GMT 1:0 ) Central European Time( Poland )</option>
+<option value="ART">(GMT 2:0 ) Eastern European Time( ART )</option>
+<option value="Africa/Blantyre">(GMT 2:0 ) Central African Time( Africa/Blantyre )</option>
+<option value="Africa/Bujumbura">(GMT 2:0 ) Central African Time( Africa/Bujumbura )</option>
+<option value="Africa/Cairo">(GMT 2:0 ) Eastern European Time( Africa/Cairo )</option>
+<option value="Africa/Gaborone">(GMT 2:0 ) Central African Time( Africa/Gaborone )</option>
+<option value="Africa/Harare">(GMT 2:0 ) Central African Time( Africa/Harare )</option>
+<option value="Africa/Johannesburg">(GMT 2:0 ) South Africa Standard Time( Africa/Johannesburg )</option>
+<option value="Africa/Kigali">(GMT 2:0 ) Central African Time( Africa/Kigali )</option>
+<option value="Africa/Lubumbashi">(GMT 2:0 ) Central African Time( Africa/Lubumbashi )</option>
+<option value="Africa/Lusaka">(GMT 2:0 ) Central African Time( Africa/Lusaka )</option>
+<option value="Africa/Maputo">(GMT 2:0 ) Central African Time( Africa/Maputo )</option>
+<option value="Africa/Maseru">(GMT 2:0 ) South Africa Standard Time( Africa/Maseru )</option>
+<option value="Africa/Mbabane">(GMT 2:0 ) South Africa Standard Time( Africa/Mbabane )</option>
+<option value="Africa/Tripoli">(GMT 2:0 ) Eastern European Time( Africa/Tripoli )</option>
+<option value="Asia/Amman">(GMT 2:0 ) Eastern European Time( Asia/Amman )</option>
+<option value="Asia/Beirut">(GMT 2:0 ) Eastern European Time( Asia/Beirut )</option>
+<option value="Asia/Damascus">(GMT 2:0 ) Eastern European Time( Asia/Damascus )</option>
+<option value="Asia/Gaza">(GMT 2:0 ) Eastern European Time( Asia/Gaza )</option>
+<option value="Asia/Istanbul">(GMT 2:0 ) Eastern European Time( Asia/Istanbul )</option>
+<option value="Asia/Jerusalem">(GMT 2:0 ) Israel Standard Time( Asia/Jerusalem )</option>
+<option value="Asia/Nicosia">(GMT 2:0 ) Eastern European Time( Asia/Nicosia )</option>
+<option value="Asia/Tel_Aviv">(GMT 2:0 ) Israel Standard Time( Asia/Tel_Aviv )</option>
+<option value="CAT">(GMT 2:0 ) Central African Time( CAT )</option>
+<option value="EET">(GMT 2:0 ) Eastern European Time( EET )</option>
+<option value="Egypt">(GMT 2:0 ) Eastern European Time( Egypt )</option>
+<option value="Etc/GMT-2">(GMT 2:0 ) GMT+02:00( Etc/GMT-2 )</option>
+<option value="Europe/Athens">(GMT 2:0 ) Eastern European Time( Europe/Athens )</option>
+<option value="Europe/Bucharest">(GMT 2:0 ) Eastern European Time( Europe/Bucharest )</option>
+<option value="Europe/Chisinau">(GMT 2:0 ) Eastern European Time( Europe/Chisinau )</option>
+<option value="Europe/Helsinki">(GMT 2:0 ) Eastern European Time( Europe/Helsinki )</option>
+<option value="Europe/Istanbul">(GMT 2:0 ) Eastern European Time( Europe/Istanbul )</option>
+<option value="Europe/Kaliningrad">(GMT 2:0 ) Eastern European Time( Europe/Kaliningrad )</option>
+<option value="Europe/Kiev">(GMT 2:0 ) Eastern European Time( Europe/Kiev )</option>
+<option value="Europe/Mariehamn">(GMT 2:0 ) Eastern European Time( Europe/Mariehamn )</option>
+<option value="Europe/Minsk">(GMT 2:0 ) Eastern European Time( Europe/Minsk )</option>
+<option value="Europe/Nicosia">(GMT 2:0 ) Eastern European Time( Europe/Nicosia )</option>
+<option value="Europe/Riga">(GMT 2:0 ) Eastern European Time( Europe/Riga )</option>
+<option value="Europe/Simferopol">(GMT 2:0 ) Eastern European Time( Europe/Simferopol )</option>
+<option value="Europe/Sofia">(GMT 2:0 ) Eastern European Time( Europe/Sofia )</option>
+<option value="Europe/Tallinn">(GMT 2:0 ) Eastern European Time( Europe/Tallinn )</option>
+<option value="Europe/Tiraspol">(GMT 2:0 ) Eastern European Time( Europe/Tiraspol )</option>
+<option value="Europe/Uzhgorod">(GMT 2:0 ) Eastern European Time( Europe/Uzhgorod )</option>
+<option value="Europe/Vilnius">(GMT 2:0 ) Eastern European Time( Europe/Vilnius )</option>
+<option value="Europe/Zaporozhye">(GMT 2:0 ) Eastern European Time( Europe/Zaporozhye )</option>
+<option value="Israel">(GMT 2:0 ) Israel Standard Time( Israel )</option>
+<option value="Libya">(GMT 2:0 ) Eastern European Time( Libya )</option>
+<option value="Turkey">(GMT 2:0 ) Eastern European Time( Turkey )</option>
+<option value="Africa/Addis_Ababa">(GMT 3:0 ) Eastern African Time( Africa/Addis_Ababa )</option>
+<option value="Africa/Asmara">(GMT 3:0 ) Eastern African Time( Africa/Asmara )</option>
+<option value="Africa/Asmera">(GMT 3:0 ) Eastern African Time( Africa/Asmera )</option>
+<option value="Africa/Dar_es_Salaam">(GMT 3:0 ) Eastern African Time( Africa/Dar_es_Salaam )</option>
+<option value="Africa/Djibouti">(GMT 3:0 ) Eastern African Time( Africa/Djibouti )</option>
+<option value="Africa/Kampala">(GMT 3:0 ) Eastern African Time( Africa/Kampala )</option>
+<option value="Africa/Khartoum">(GMT 3:0 ) Eastern African Time( Africa/Khartoum )</option>
+<option value="Africa/Mogadishu">(GMT 3:0 ) Eastern African Time( Africa/Mogadishu )</option>
+<option value="Africa/Nairobi">(GMT 3:0 ) Eastern African Time( Africa/Nairobi )</option>
+<option value="Antarctica/Syowa">(GMT 3:0 ) Syowa Time( Antarctica/Syowa )</option>
+<option value="Asia/Aden">(GMT 3:0 ) Arabia Standard Time( Asia/Aden )</option>
+<option value="Asia/Baghdad">(GMT 3:0 ) Arabia Standard Time( Asia/Baghdad )</option>
+<option value="Asia/Bahrain">(GMT 3:0 ) Arabia Standard Time( Asia/Bahrain )</option>
+<option value="Asia/Kuwait">(GMT 3:0 ) Arabia Standard Time( Asia/Kuwait )</option>
+<option value="Asia/Qatar">(GMT 3:0 ) Arabia Standard Time( Asia/Qatar )</option>
+<option value="Asia/Riyadh">(GMT 3:0 ) Arabia Standard Time( Asia/Riyadh )</option>
+<option value="EAT">(GMT 3:0 ) Eastern African Time( EAT )</option>
+<option value="Etc/GMT-3">(GMT 3:0 ) GMT+03:00( Etc/GMT-3 )</option>
+<option value="Europe/Moscow">(GMT 3:0 ) Moscow Standard Time( Europe/Moscow )</option>
+<option value="Europe/Volgograd">(GMT 3:0 ) Volgograd Time( Europe/Volgograd )</option>
+<option value="Indian/Antananarivo">(GMT 3:0 ) Eastern African Time( Indian/Antananarivo )</option>
+<option value="Indian/Comoro">(GMT 3:0 ) Eastern African Time( Indian/Comoro )</option>
+<option value="Indian/Mayotte">(GMT 3:0 ) Eastern African Time( Indian/Mayotte )</option>
+<option value="W-SU">(GMT 3:0 ) Moscow Standard Time( W-SU )</option>
+<option value="Asia/Riyadh87">(GMT 3:7 ) GMT+03:07( Asia/Riyadh87 )</option>
+<option value="Asia/Riyadh88">(GMT 3:7 ) GMT+03:07( Asia/Riyadh88 )</option>
+<option value="Asia/Riyadh89">(GMT 3:7 ) GMT+03:07( Asia/Riyadh89 )</option>
+<option value="Mideast/Riyadh87">(GMT 3:7 ) GMT+03:07( Mideast/Riyadh87 )</option>
+<option value="Mideast/Riyadh88">(GMT 3:7 ) GMT+03:07( Mideast/Riyadh88 )</option>
+<option value="Mideast/Riyadh89">(GMT 3:7 ) GMT+03:07( Mideast/Riyadh89 )</option>
+<option value="Asia/Tehran">(GMT 3:30 ) Iran Standard Time( Asia/Tehran )</option>
+<option value="Iran">(GMT 3:30 ) Iran Standard Time( Iran )</option>
+<option value="Asia/Baku">(GMT 4:0 ) Azerbaijan Time( Asia/Baku )</option>
+<option value="Asia/Dubai">(GMT 4:0 ) Gulf Standard Time( Asia/Dubai )</option>
+<option value="Asia/Muscat">(GMT 4:0 ) Gulf Standard Time( Asia/Muscat )</option>
+<option value="Asia/Tbilisi">(GMT 4:0 ) Georgia Time( Asia/Tbilisi )</option>
+<option value="Asia/Yerevan">(GMT 4:0 ) Armenia Time( Asia/Yerevan )</option>
+<option value="Etc/GMT-4">(GMT 4:0 ) GMT+04:00( Etc/GMT-4 )</option>
+<option value="Europe/Samara">(GMT 4:0 ) Samara Time( Europe/Samara )</option>
+<option value="Indian/Mahe">(GMT 4:0 ) Seychelles Time( Indian/Mahe )</option>
+<option value="Indian/Mauritius">(GMT 4:0 ) Mauritius Time( Indian/Mauritius )</option>
+<option value="Indian/Reunion">(GMT 4:0 ) Reunion Time( Indian/Reunion )</option>
+<option value="NET">(GMT 4:0 ) Armenia Time( NET )</option>
+<option value="Asia/Kabul">(GMT 4:30 ) Afghanistan Time( Asia/Kabul )</option>
+<option value="Antarctica/Mawson">(GMT 5:0 ) Mawson Time( Antarctica/Mawson )</option>
+<option value="Asia/Aqtau">(GMT 5:0 ) Aqtau Time( Asia/Aqtau )</option>
+<option value="Asia/Aqtobe">(GMT 5:0 ) Aqtobe Time( Asia/Aqtobe )</option>
+<option value="Asia/Ashgabat">(GMT 5:0 ) Turkmenistan Time( Asia/Ashgabat )</option>
+<option value="Asia/Ashkhabad">(GMT 5:0 ) Turkmenistan Time( Asia/Ashkhabad )</option>
+<option value="Asia/Dushanbe">(GMT 5:0 ) Tajikistan Time( Asia/Dushanbe )</option>
+<option value="Asia/Karachi">(GMT 5:0 ) Pakistan Time( Asia/Karachi )</option>
+<option value="Asia/Oral">(GMT 5:0 ) Oral Time( Asia/Oral )</option>
+<option value="Asia/Samarkand">(GMT 5:0 ) Uzbekistan Time( Asia/Samarkand )</option>
+<option value="Asia/Tashkent">(GMT 5:0 ) Uzbekistan Time( Asia/Tashkent )</option>
+<option value="Asia/Yekaterinburg">(GMT 5:0 ) Yekaterinburg Time( Asia/Yekaterinburg )</option>
+<option value="Etc/GMT-5">(GMT 5:0 ) GMT+05:00( Etc/GMT-5 )</option>
+<option value="Indian/Kerguelen">(GMT 5:0 ) French Southern &amp; Antarctic Lands Time( Indian/Kerguelen )</option>
+<option value="Indian/Maldives">(GMT 5:0 ) Maldives Time( Indian/Maldives )</option>
+<option value="PLT">(GMT 5:0 ) Pakistan Time( PLT )</option>
+<option value="Asia/Calcutta" selected="">(GMT 5:30 ) India Standard Time( Asia/Calcutta )</option>
+<option value="Asia/Colombo">(GMT 5:30 ) India Standard Time( Asia/Colombo )</option>
+<option value="Asia/Kolkata">(GMT 5:30 ) India Standard Time( Asia/Kolkata )</option>
+<option value="IST">(GMT 5:30 ) India Standard Time( IST )</option>
+<option value="Asia/Kathmandu">(GMT 5:45 ) Nepal Time( Asia/Kathmandu )</option>
+<option value="Asia/Katmandu">(GMT 5:45 ) Nepal Time( Asia/Katmandu )</option>
+<option value="Antarctica/Vostok">(GMT 6:0 ) Vostok Time( Antarctica/Vostok )</option>
+<option value="Asia/Almaty">(GMT 6:0 ) Alma-Ata Time( Asia/Almaty )</option>
+<option value="Asia/Bishkek">(GMT 6:0 ) Kirgizstan Time( Asia/Bishkek )</option>
+<option value="Asia/Dacca">(GMT 6:0 ) Bangladesh Time( Asia/Dacca )</option>
+<option value="Asia/Dhaka">(GMT 6:0 ) Bangladesh Time( Asia/Dhaka )</option>
+<option value="Asia/Novosibirsk">(GMT 6:0 ) Novosibirsk Time( Asia/Novosibirsk )</option>
+<option value="Asia/Omsk">(GMT 6:0 ) Omsk Time( Asia/Omsk )</option>
+<option value="Asia/Qyzylorda">(GMT 6:0 ) Qyzylorda Time( Asia/Qyzylorda )</option>
+<option value="Asia/Thimbu">(GMT 6:0 ) Bhutan Time( Asia/Thimbu )</option>
+<option value="Asia/Thimphu">(GMT 6:0 ) Bhutan Time( Asia/Thimphu )</option>
+<option value="BST">(GMT 6:0 ) Bangladesh Time( BST )</option>
+<option value="Etc/GMT-6">(GMT 6:0 ) GMT+06:00( Etc/GMT-6 )</option>
+<option value="Indian/Chagos">(GMT 6:0 ) Indian Ocean Territory Time( Indian/Chagos )</option>
+<option value="Asia/Rangoon">(GMT 6:30 ) Myanmar Time( Asia/Rangoon )</option>
+<option value="Indian/Cocos">(GMT 6:30 ) Cocos Islands Time( Indian/Cocos )</option>
+<option value="Antarctica/Davis">(GMT 7:0 ) Davis Time( Antarctica/Davis )</option>
+<option value="Asia/Bangkok">(GMT 7:0 ) Indochina Time( Asia/Bangkok )</option>
+<option value="Asia/Ho_Chi_Minh">(GMT 7:0 ) Indochina Time( Asia/Ho_Chi_Minh )</option>
+<option value="Asia/Hovd">(GMT 7:0 ) Hovd Time( Asia/Hovd )</option>
+<option value="Asia/Jakarta">(GMT 7:0 ) West Indonesia Time( Asia/Jakarta )</option>
+<option value="Asia/Krasnoyarsk">(GMT 7:0 ) Krasnoyarsk Time( Asia/Krasnoyarsk )</option>
+<option value="Asia/Phnom_Penh">(GMT 7:0 ) Indochina Time( Asia/Phnom_Penh )</option>
+<option value="Asia/Pontianak">(GMT 7:0 ) West Indonesia Time( Asia/Pontianak )</option>
+<option value="Asia/Saigon">(GMT 7:0 ) Indochina Time( Asia/Saigon )</option>
+<option value="Asia/Vientiane">(GMT 7:0 ) Indochina Time( Asia/Vientiane )</option>
+<option value="Etc/GMT-7">(GMT 7:0 ) GMT+07:00( Etc/GMT-7 )</option>
+<option value="Indian/Christmas">(GMT 7:0 ) Christmas Island Time( Indian/Christmas )</option>
+<option value="VST">(GMT 7:0 ) Indochina Time( VST )</option>
+<option value="Antarctica/Casey">(GMT 8:0 ) Western Standard Time (Australia)( Antarctica/Casey )</option>
+<option value="Asia/Brunei">(GMT 8:0 ) Brunei Time( Asia/Brunei )</option>
+<option value="Asia/Choibalsan">(GMT 8:0 ) Choibalsan Time( Asia/Choibalsan )</option>
+<option value="Asia/Chongqing">(GMT 8:0 ) China Standard Time( Asia/Chongqing )</option>
+<option value="Asia/Chungking">(GMT 8:0 ) China Standard Time( Asia/Chungking )</option>
+<option value="Asia/Harbin">(GMT 8:0 ) China Standard Time( Asia/Harbin )</option>
+<option value="Asia/Hong_Kong">(GMT 8:0 ) Hong Kong Time( Asia/Hong_Kong )</option>
+<option value="Asia/Irkutsk">(GMT 8:0 ) Irkutsk Time( Asia/Irkutsk )</option>
+<option value="Asia/Kashgar">(GMT 8:0 ) China Standard Time( Asia/Kashgar )</option>
+<option value="Asia/Kuala_Lumpur">(GMT 8:0 ) Malaysia Time( Asia/Kuala_Lumpur )</option>
+<option value="Asia/Kuching">(GMT 8:0 ) Malaysia Time( Asia/Kuching )</option>
+<option value="Asia/Macao">(GMT 8:0 ) China Standard Time( Asia/Macao )</option>
+<option value="Asia/Macau">(GMT 8:0 ) China Standard Time( Asia/Macau )</option>
+<option value="Asia/Makassar">(GMT 8:0 ) Central Indonesia Time( Asia/Makassar )</option>
+<option value="Asia/Manila">(GMT 8:0 ) Philippines Time( Asia/Manila )</option>
+<option value="Asia/Shanghai">(GMT 8:0 ) China Standard Time( Asia/Shanghai )</option>
+<option value="Asia/Singapore">(GMT 8:0 ) Singapore Time( Asia/Singapore )</option>
+<option value="Asia/Taipei">(GMT 8:0 ) China Standard Time( Asia/Taipei )</option>
+<option value="Asia/Ujung_Pandang">(GMT 8:0 ) Central Indonesia Time( Asia/Ujung_Pandang )</option>
+<option value="Asia/Ulaanbaatar">(GMT 8:0 ) Ulaanbaatar Time( Asia/Ulaanbaatar )</option>
+<option value="Asia/Ulan_Bator">(GMT 8:0 ) Ulaanbaatar Time( Asia/Ulan_Bator )</option>
+<option value="Asia/Urumqi">(GMT 8:0 ) China Standard Time( Asia/Urumqi )</option>
+<option value="Australia/Perth">(GMT 8:0 ) Western Standard Time (Australia)( Australia/Perth )</option>
+<option value="Australia/West">(GMT 8:0 ) Western Standard Time (Australia)( Australia/West )</option>
+<option value="CTT">(GMT 8:0 ) China Standard Time( CTT )</option>
+<option value="Etc/GMT-8">(GMT 8:0 ) GMT+08:00( Etc/GMT-8 )</option>
+<option value="Hongkong">(GMT 8:0 ) Hong Kong Time( Hongkong )</option>
+<option value="PRC">(GMT 8:0 ) China Standard Time( PRC )</option>
+<option value="Singapore">(GMT 8:0 ) Singapore Time( Singapore )</option>
+<option value="Australia/Eucla">(GMT 8:45 ) Central Western Standard Time (Australia)( Australia/Eucla )</option>
+<option value="Asia/Dili">(GMT 9:0 ) Timor-Leste Time( Asia/Dili )</option>
+<option value="Asia/Jayapura">(GMT 9:0 ) East Indonesia Time( Asia/Jayapura )</option>
+<option value="Asia/Pyongyang">(GMT 9:0 ) Korea Standard Time( Asia/Pyongyang )</option>
+<option value="Asia/Seoul">(GMT 9:0 ) Korea Standard Time( Asia/Seoul )</option>
+<option value="Asia/Tokyo">(GMT 9:0 ) Japan Standard Time( Asia/Tokyo )</option>
+<option value="Asia/Yakutsk">(GMT 9:0 ) Yakutsk Time( Asia/Yakutsk )</option>
+<option value="Etc/GMT-9">(GMT 9:0 ) GMT+09:00( Etc/GMT-9 )</option>
+<option value="JST">(GMT 9:0 ) Japan Standard Time( JST )</option>
+<option value="Japan">(GMT 9:0 ) Japan Standard Time( Japan )</option>
+<option value="Pacific/Palau">(GMT 9:0 ) Palau Time( Pacific/Palau )</option>
+<option value="ROK">(GMT 9:0 ) Korea Standard Time( ROK )</option>
+<option value="ACT">(GMT 9:30 ) Central Standard Time (Northern Territory)( ACT )</option>
+<option value="Australia/Adelaide">(GMT 9:30 ) Central Summer Time (South Australia)( Australia/Adelaide )</option>
+<option value="Australia/Broken_Hill">(GMT 9:30 ) Central Summer Time (South Australia/New South Wales)( Australia/Broken_Hill )</option>
+<option value="Australia/Darwin">(GMT 9:30 ) Central Standard Time (Northern Territory)( Australia/Darwin )</option>
+<option value="Australia/North">(GMT 9:30 ) Central Standard Time (Northern Territory)( Australia/North )</option>
+<option value="Australia/South">(GMT 9:30 ) Central Summer Time (South Australia)( Australia/South )</option>
+<option value="Australia/Yancowinna">(GMT 9:30 ) Central Summer Time (South Australia/New South Wales)( Australia/Yancowinna )</option>
+<option value="AET">(GMT 10:0 ) Eastern Summer Time (New South Wales)( AET )</option>
+<option value="Antarctica/DumontDUrville">(GMT 10:0 ) Dumont-d'Urville Time( Antarctica/DumontDUrville )</option>
+<option value="Asia/Sakhalin">(GMT 10:0 ) Sakhalin Time( Asia/Sakhalin )</option>
+<option value="Asia/Vladivostok">(GMT 10:0 ) Vladivostok Time( Asia/Vladivostok )</option>
+<option value="Australia/ACT">(GMT 10:0 ) Eastern Summer Time (New South Wales)( Australia/ACT )</option>
+<option value="Australia/Brisbane">(GMT 10:0 ) Eastern Standard Time (Queensland)( Australia/Brisbane )</option>
+<option value="Australia/Canberra">(GMT 10:0 ) Eastern Summer Time (New South Wales)( Australia/Canberra )</option>
+<option value="Australia/Currie">(GMT 10:0 ) Eastern Summer Time (New South Wales)( Australia/Currie )</option>
+<option value="Australia/Hobart">(GMT 10:0 ) Eastern Summer Time (Tasmania)( Australia/Hobart )</option>
+<option value="Australia/Lindeman">(GMT 10:0 ) Eastern Standard Time (Queensland)( Australia/Lindeman )</option>
+<option value="Australia/Melbourne">(GMT 10:0 ) Eastern Summer Time (Victoria)( Australia/Melbourne )</option>
+<option value="Australia/NSW">(GMT 10:0 ) Eastern Summer Time (New South Wales)( Australia/NSW )</option>
+<option value="Australia/Queensland">(GMT 10:0 ) Eastern Standard Time (Queensland)( Australia/Queensland )</option>
+<option value="Australia/Sydney">(GMT 10:0 ) Eastern Summer Time (New South Wales)( Australia/Sydney )</option>
+<option value="Australia/Tasmania">(GMT 10:0 ) Eastern Summer Time (Tasmania)( Australia/Tasmania )</option>
+<option value="Australia/Victoria">(GMT 10:0 ) Eastern Summer Time (Victoria)( Australia/Victoria )</option>
+<option value="Etc/GMT-10">(GMT 10:0 ) GMT+10:00( Etc/GMT-10 )</option>
+<option value="Pacific/Guam">(GMT 10:0 ) Chamorro Standard Time( Pacific/Guam )</option>
+<option value="Pacific/Port_Moresby">(GMT 10:0 ) Papua New Guinea Time( Pacific/Port_Moresby )</option>
+<option value="Pacific/Saipan">(GMT 10:0 ) Chamorro Standard Time( Pacific/Saipan )</option>
+<option value="Pacific/Truk">(GMT 10:0 ) Truk Time( Pacific/Truk )</option>
+<option value="Pacific/Yap">(GMT 10:0 ) Truk Time( Pacific/Yap )</option>
+<option value="Australia/LHI">(GMT 10:30 ) Lord Howe Summer Time( Australia/LHI )</option>
+<option value="Australia/Lord_Howe">(GMT 10:30 ) Lord Howe Summer Time( Australia/Lord_Howe )</option>
+<option value="Asia/Magadan">(GMT 11:0 ) Magadan Time( Asia/Magadan )</option>
+<option value="Etc/GMT-11">(GMT 11:0 ) GMT+11:00( Etc/GMT-11 )</option>
+<option value="Pacific/Efate">(GMT 11:0 ) Vanuatu Time( Pacific/Efate )</option>
+<option value="Pacific/Guadalcanal">(GMT 11:0 ) Solomon Is. Time( Pacific/Guadalcanal )</option>
+<option value="Pacific/Kosrae">(GMT 11:0 ) Kosrae Time( Pacific/Kosrae )</option>
+<option value="Pacific/Noumea">(GMT 11:0 ) New Caledonia Time( Pacific/Noumea )</option>
+<option value="Pacific/Ponape">(GMT 11:0 ) Ponape Time( Pacific/Ponape )</option>
+<option value="SST">(GMT 11:0 ) Solomon Is. Time( SST )</option>
+<option value="Pacific/Norfolk">(GMT 11:30 ) Norfolk Time( Pacific/Norfolk )</option>
+<option value="Antarctica/McMurdo">(GMT 12:0 ) New Zealand Daylight Time( Antarctica/McMurdo )</option>
+<option value="Antarctica/South_Pole">(GMT 12:0 ) New Zealand Daylight Time( Antarctica/South_Pole )</option>
+<option value="Asia/Anadyr">(GMT 12:0 ) Anadyr Time( Asia/Anadyr )</option>
+<option value="Asia/Kamchatka">(GMT 12:0 ) Petropavlovsk-Kamchatski Time( Asia/Kamchatka )</option>
+<option value="Etc/GMT-12">(GMT 12:0 ) GMT+12:00( Etc/GMT-12 )</option>
+<option value="Kwajalein">(GMT 12:0 ) Marshall Islands Time( Kwajalein )</option>
+<option value="NST">(GMT 12:0 ) New Zealand Daylight Time( NST )</option>
+<option value="NZ">(GMT 12:0 ) New Zealand Daylight Time( NZ )</option>
+<option value="Pacific/Auckland">(GMT 12:0 ) New Zealand Daylight Time( Pacific/Auckland )</option>
+<option value="Pacific/Fiji">(GMT 12:0 ) Fiji Time( Pacific/Fiji )</option>
+<option value="Pacific/Funafuti">(GMT 12:0 ) Tuvalu Time( Pacific/Funafuti )</option>
+<option value="Pacific/Kwajalein">(GMT 12:0 ) Marshall Islands Time( Pacific/Kwajalein )</option>
+<option value="Pacific/Majuro">(GMT 12:0 ) Marshall Islands Time( Pacific/Majuro )</option>
+<option value="Pacific/Nauru">(GMT 12:0 ) Nauru Time( Pacific/Nauru )</option>
+<option value="Pacific/Tarawa">(GMT 12:0 ) Gilbert Is. Time( Pacific/Tarawa )</option>
+<option value="Pacific/Wake">(GMT 12:0 ) Wake Time( Pacific/Wake )</option>
+<option value="Pacific/Wallis">(GMT 12:0 ) Wallis &amp; Futuna Time( Pacific/Wallis )</option>
+<option value="NZ-CHAT">(GMT 12:45 ) Chatham Daylight Time( NZ-CHAT )</option>
+<option value="Pacific/Chatham">(GMT 12:45 ) Chatham Daylight Time( Pacific/Chatham )</option>
+<option value="Etc/GMT-13">(GMT 13:0 ) GMT+13:00( Etc/GMT-13 )</option>
+<option value="Pacific/Enderbury">(GMT 13:0 ) Phoenix Is. Time( Pacific/Enderbury )</option>
+<option value="Pacific/Tongatapu">(GMT 13:0 ) Tonga Time( Pacific/Tongatapu )</option>
+<option value="Etc/GMT-14">(GMT 14:0 ) GMT+14:00( Etc/GMT-14 )</option>
+<option value="Pacific/Kiritimati">(GMT 14:0 ) Line Is. Time( Pacific/Kiritimati )</option>
+<option value="Antarctica/Macquarie">(GMT 11:0 ) GMT+11:00( Antarctica/Macquarie )</option>
+<option value="Asia/Novokuznetsk">(GMT 6:0 ) GMT+06:00( Asia/Novokuznetsk )</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-2">
+              <div id="tabs-b">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-b-1">Change Password</a></li>
+                  <li class="tab_last_li"><a href="#tabs-b-2">Visitors</a></li>
+                </ul>
+                <div id="tabs-b-1">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Current Password </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Password Hint </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> New Password </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> New Password Verify </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-b-2">
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-3">
+              <div id="tabs-c">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-c-1">Name Format</a></li>
+                  <li class="tab_last_li"><a href="#tabs-c-2">Another tab</a></li>
+                </ul>
+                <div id="tabs-c-1">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Set the full name format </div>
+                        <div class="box_panel">
+                          <select name="Set the full name format" id="name_format_setup">
+                            <option value="option1">Last Name, First Name</option>
+                            <option value="option2">Set the full name format 2</option>
+                            <option value="option3">Set the full name format 3</option>
+                            <option value="option4">Set the full name format 4</option>
+                            <option value="option4">Set the full name format 5</option>
+                            <option value="option4">Set the full name format 6</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-c-2">
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-4">
+              <div id="tabs-d">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-d-1">External Accounts</a></li>
+                  <li class="tab_last_li"><a href="#tabs-d-2">Another tab</a></li>
+                </ul>
+                <div id="tabs-d-1">
+                  <div id="external_buttons">
+                    <div class="setup_info full_width_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow full_page_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                    <ul>
+                      <li><a class="new_camp" href="#">Create</a></li>
+                      <li><a class="delete_external" href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="tabs-d-2">
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-5">
+              <div id="tabs-e">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-e-1">Delegate</a></li>
+                  <li class="tab_last_li"><a href="#tabs-e-2">Another tab</a></li>
+                </ul>
+                <div id="tabs-e-1">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Current Password </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Password Hint </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> New Password </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> New Password Verify </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-e-2">
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-6">
+              <div id="tabs-f">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-f-1">Signature</a></li>
+                  <li class="tab_last_li"><a href="#tabs-f-2">Another tab</a></li>
+                </ul>
+                <div id="tabs-f-1">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Email Address </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Email Signature </div>
+                        <div class="box_panel">
+                          <select name="Email Signature" id="email_signature">
+                           <option value="none">None</option>
+<option selected="selected" value="user">Use my signature</option>
+<option value="admin">Use default</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-f-2">
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                </div>
+              </div>
+            </div>
+            <div id="tabs-7">
+              <div id="tabs-g">
+                <ul>
+                  <li class="tab_first_li"><a href="#tabs-g-1">Themes</a></li>
+                  <li class="tab_last_li"><a href="#tabs-g-2">Another tab</a></li>
+                </ul>
+                <div id="tabs-g-1">
+                  <div class="setup_form_left">
+                    <div class="error_msg"> Error Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="success_msg"> Success Message , and easy to customize backend administration user interface <a href="#" class="cross"> <img src="images/blank.gif" alt="" title="" /> </a> </div>
+                    <div class="setupform_left">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Current Password </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> Password Hint </div>
+                        <div class="box_panel">
+                          <input type="text" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="setupform_right">
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> New Password </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                      <div class="setup_form_panel">
+                        <div class="name_panel"> New Password Verify </div>
+                        <div class="box_panel">
+                          <input type="password" alt="" title="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_page_continue">
+                      <input type="submit" class="continue_button" value="Save" />
+
+                      <input type="submit" class="cancel_button" value="Save & Continue"/>
+                    </div>
+                  </div>
+                  <div class="setup_form_right">
+                    <div class="setup_info">
+                      <div class="info_heading"> Information </div>
+                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                      <div class="setup_info_shadow"> <img src="images/blank.gif" alt="" title="" /> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tabs-g-2">
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                  <p>nested tabs b-2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--table_content end-->
+      </div>
+      <!--table_end-->
+    </section>
+    <!--middlepart_send-->
+  </section>
+  <!--wrapper_end-->
+  <!--footer_start-->
+  <footer>
+    <div class="footer_right">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li>|</li>
+        <li><a href="#">Terms of Service</a></li>
+        <li>|</li>
+        <li>© 2012 IaCrm. All rights reserved.</li>
+      </ul>
+    </div>
+  </footer>
+  <!--footer_end-->
+</div>
+<!--container_end-->
+<script>
+
+$('#tabs, #tabs-a, #tabs-b, #tabs-c, #tabs-d, #tabs-e, #tabs-f, #tabs-g').tabs();
+</script>
+</body>
+</html>
